@@ -3,52 +3,155 @@
 {% block title %}About | The Swap Club{% endblock %}
 
 {% block extra_css %}
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/about.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/about.css') }}">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
 {% endblock %}
 
 {% block content %}
 
-
 <div class="container">
-  <div id="image-slider" class="splide">
+
+  <!-- IMAGE SLIDER -->
+  <section id="image-slider" class="splide">
+
     <div class="splide__track">
+
       <ul class="splide__list">
-        <li class="splide__slide">          
-          <img src="images/image01.jpeg" alt="Image 1">
-        </li>
+
         <li class="splide__slide">
-          <img src="images/image02.jpeg" alt="Image 2">
+          <img 
+            src="{{ url_for('static', filename='images/Swap Club Image 02.jpeg') }}" 
+      
+          >
         </li>
+
         <li class="splide__slide">
-          <img src="images/image03.jpeg" alt="Image 3">
+          <img 
+            src="{{ url_for('static', filename='images/SwapClub Image 03.jpeg') }}"
+          >
         </li>
+
+        <li class="splide__slide">
+          <img 
+            src="{{ url_for('static', filename='images/SwapClub Image 01.jpeg') }}" 
+      
+          >
+        </li>
+
       </ul>
+
+    </div>
+
+    <!-- OVERLAY TEXT -->
+    <div id="slider-text">
+
+      <h1>
+      The Swap Club is a sustainable,community-driven space.
+      </h1>
+
+      <h1>
+        We're on a mission to help people consume less, share more, and feel good doing it.
+      </h1>
+
+    </div>
+
+  </section>
+  
+  <div class="stats-bar">
+    <div class="stat-item">
+      <span class="stat-num">42</span>
+      <span class="stat-label">Events Hosted</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">2755</span>
+      <span class="stat-label">Swappers</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">40K</span>
+      <span class="stat-label">Items Swapped</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">26K</span>
+      <span class="stat-label">Kg Waste Saved</span>
     </div>
   </div>
-  <section id="slider-text">
-    <p>The Swap Club is a sustainable, community-driven space.</p>
-    <p>We’re on a mission to help people consume less, share more, and feel good doing it.</p>
-  </section>
 
-  <section id="about-content">
-    <h2>community</h2>
-    <p>We started with one simple idea: people have so much to give and even more to gain, when they swap, not shop.</p>
-    <p>Today, The Swap Club is a growing movement of people who come together to shop more sustainably with their fashion, accessories, and much more. Whether you’re here to refresh your closet, make new friends, or just try something new; everyone is welcome!</p>
+  <!-- ABOUT CONTENT -->
+  <section id="about-content" class="about-content">
+    <h2>Our Mission</h2>
+    <p>
+      We started with one simple idea: people have so much to give
+      and even more to gain when they swap, not shop.
+    </p>
+    <p>
+      Today, The Swap Club is a growing movement of people who come together
+      to shop more sustainably with fashion, accessories, and much more.
+      Whether you’re here to refresh your closet, make new friends,
+      or simply try something new — everyone is welcome.
+    </p>
   </section>
-</div>
+  
+  <!--Articles-->
+<section id="articles" class="articles">
+  <h2>Articles About Us</h2>
+  <div class="article-list">
+    <!-- ARTICLE 1 -->
+    <a 
+      href="https://www.parool.nl/uit-in-amsterdam/moeite-met-het-wegleggen-van-je-telefoon-op-deze-vijf-plekken-moet-je-wel-en-heb-je-als-het-goed-is-nog-een-leuke-tijd-ook~b716965f/?referrer=https%3A%2F%2Fwww.google.com%2F" 
+      target="_blank" 
+      class="article-card"
+    >
+      <img 
+        src="{{ url_for('static', filename='images/Article01.jpg') }}" 
+        alt="Het Parool article"
+      >
 
+      <h3>Het Parool</h3>
+    </a>
+    <!-- ARTICLE 2 -->
+    <a 
+      href="https://www.trouw.nl/tijdgeest/bij-de-kledingruilclub-loopt-mijn-geliefde-jeans-voorbij-op-kortere-benen~b3570782/?referrer=https%3A%2F%2Fwww.google.com%2F" 
+      target="_blank" 
+      class="article-card"
+    >
+      <img 
+        src="{{ url_for('static', filename='images/Article02.avif') }}" 
+        alt="Trouw article"
+      >
+      <h3>Trouw</h3>
+    </a>
+    <!-- ARTICLE 3 -->
+    <a 
+      href="https://www.napnieuws.nl/2025/02/12/swap-till-you-drop/" 
+      target="_blank" 
+      class="article-card"
+    >
+      <img 
+        src="{{ url_for('static', filename='images/Article03.avif') }}" 
+        alt="Nap Nieuws article"
+      >
+      <h3>Nap Nieuws</h3>
+    </a>
+  </div>
+</section>
+
+<!-- SPLIDE -->
 <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+
 <script>
-  document.addEventListener('DOMContentLoaded', function () {
-    new Splide('#image-slider', {
-      type: 'loop',
-      autoplay: true,
-      interval: 3000,
-    }).mount();
-  });
+document.addEventListener('DOMContentLoaded', function () {
+
+  new Splide('#image-slider', {
+    type: 'loop',
+    autoplay: true,
+    interval: 4000,
+    pauseOnHover: false,
+    arrows: false,
+    pagination: false,
+    speed: 1200,
+  }).mount();
+
+});
 </script>
 
 {% endblock %}
-
-
-
