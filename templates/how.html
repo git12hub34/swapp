@@ -1,0 +1,555 @@
+{% extends "base.html" %}
+
+{% block title %}How it works | The Swap Club{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/how.css') }}">
+{% endblock %}
+
+
+{% block extra_js %}
+<script src="{{ url_for('static', filename='js/how.js') }}"></script>
+<script src="{{ url_for('static', filename='js/base.js') }}"></script>
+{% endblock %}
+
+
+{% block content %}
+
+<main class="how-page">
+
+  <!-- =========================================================
+       HERO
+       ========================================================= -->
+  <section class="events-hero reveal">
+    <div class="events-hero-text">
+      <p class="page-label">How to swap</p>
+      <h1>How it <br> works?</h1>
+      <p>
+        Bring clothes you no longer wear, earn points, and swap them for something new.
+        Four simple steps to a more unique wardrobe.
+      </p>
+    </div>
+
+    <div class="events-hero-summary">
+      <ol class="event-flow-list">
+        <li>Swapping process</li>
+        <li>What to bring</li>
+        <li>Points guide</li>
+        <li>FAQs</li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       2. SWAPPING PROCESS
+       ========================================================= -->
+  <section class="steps-outer reveal" id="how-it-works">
+
+    <div class="steps-sidebar">
+      <div class="steps-progress-track">
+        <div class="steps-progress-fill" id="stepsFill"></div>
+      </div>
+
+      <div class="steps-nav">
+        <button class="step-nav-btn active" data-step="0">
+          <span class="step-nav-dot"></span>
+          <span class="step-nav-label">Bring Your Items</span>
+        </button>
+
+        <button class="step-nav-btn" data-step="1">
+          <span class="step-nav-dot"></span>
+          <span class="step-nav-label">Earn Points</span>
+        </button>
+
+        <button class="step-nav-btn" data-step="2">
+          <span class="step-nav-dot"></span>
+          <span class="step-nav-label">Browse &amp; Shop</span>
+        </button>
+
+        <button class="step-nav-btn" data-step="3">
+          <span class="step-nav-dot"></span>
+          <span class="step-nav-label">After the Event</span>
+        </button>
+      </div>
+    </div>
+
+
+    <div class="steps-scroll" id="stepsScroll">
+
+      <div class="step-slide" data-index="0">
+        <div class="step-content">
+          <div class="step-image-wrap">
+            <img src="{{ url_for('static', filename='images/clothes1.jpg') }}" alt="Bring your items" class="step-img">
+          </div>
+
+          <div class="step-text">
+            <span class="step-number">1</span>
+            <h3 class="step-title">Bring Your Items</h3>
+            <p class="step-body">Bring your clean and good quality pre-loved items to our events.</p>
+            <a href="/events" class="btn btn-teal">Find an Event</a>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="step-slide" data-index="1">
+        <div class="step-content">
+          <div class="step-image-wrap">
+            <img src="{{ url_for('static', filename='images/clothes2.jpg') }}" alt="Earn points" class="step-img">
+          </div>
+
+          <div class="step-text">
+            <span class="step-number">2</span>
+            <h3 class="step-title">Earn Points</h3>
+            <p class="step-body">
+              Earn swap points to your personalised digital wallet according to quality and type of item.
+              <a href="/how" class="inline-link">Learn More.</a>
+            </p>
+            <a href="/how" class="btn btn-teal">Learn More</a>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="step-slide" data-index="2">
+        <div class="step-content">
+          <div class="step-image-wrap">
+            <img src="{{ url_for('static', filename='images/clothes3.jpg') }}" alt="Browse and shop" class="step-img">
+          </div>
+
+          <div class="step-text">
+            <span class="step-number">3</span>
+            <h3 class="step-title">Let's the Swapping Begin!</h3>
+            <p class="step-body">Bring your clean and good quality pre-loved items to our events.</p>
+            <a href="/events" class="btn btn-teal">Find an Event</a>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="step-slide" data-index="3">
+        <div class="step-content">
+          <div class="step-image-wrap">
+            <img src="{{ url_for('static', filename='images/clothes4.jpg') }}" alt="After the event" class="step-img">
+          </div>
+
+          <div class="step-text">
+            <span class="step-number">4</span>
+            <h3 class="step-title">After the Event</h3>
+            <p class="step-body">
+              Go home with feel-good feels, no money spent, just good vibes.
+              And use your left over points for the next event!
+            </p>
+            <a href="/community" class="btn btn-teal">Join the Community</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- =========================================================
+       3. WHAT ARE SWAP POINTS?
+       ========================================================= -->
+  <section class="about-section reveal">
+    <div class="about-inner">
+      <p class="about-label">Point system</p>
+      <h2 class="about-title">What are swap points?</h2>
+      <p class="about-body">
+        Swap Points are the points you earn for every item you hand in. The more points you collect,
+        the more you can swap. Simply choose clothes with the equivalent point value and take them home.
+        You can check your points in your digital app and use them at our events. Your points never expire.
+      </p>
+      <p class="about-sub">How are points determined?</p>
+      <p class="about-body">
+        Every item starts with a base point value based on its type. Bonus points are then added depending on the item’s condition, brand, material, or whether it is brand new with tags. 
+      </p>
+    </div>
+  </section>
+
+
+  <!-- =========================================================
+       4. POINT SYSTEM
+       ========================================================= -->
+  <section class="points-section reveal" id="points-system">
+    <div class="points-inner">
+
+      <div class="points-heading">
+        <h3>Base Points</h3>
+        <p>by item type</p>
+      </div>
+
+      <div class="points-grid">
+        <article class="point-card">
+          <div class="point-token">1</div>
+          <p class="point-kicker">Point</p>
+          <h3 class="point-title">Basic Pieces</h3>
+          <p class="point-desc">T-shirts, basic tops, shorts, hats, belts and jewellery.</p>
+        </article>
+
+        <article class="point-card">
+          <div class="point-token">2</div>
+          <p class="point-kicker">Points</p>
+          <h3 class="point-title">Everyday Wardrobe</h3>
+          <p class="point-desc">
+            Jeans, skirts, blouses, button-up tops, pants, cardigans, sweaters and jumpers.
+          </p>
+        </article>
+              
+        <article class="point-card">
+          <div class="point-token">3</div>
+          <p class="point-kicker">Points</p>
+          <h3 class="point-title">Statement Items</h3>
+          <p class="point-desc">Dresses, blazers, jackets, jumpsuits, shoes, boots and bags.</p>
+        </article>
+      </div>
+
+
+      <div class="bonus-wrap">
+        <div class="bonus-heading">
+          <h3 class="bonus-title">Bonus Points</h3>
+          <p class="bonus-subtitle">by brand</p>
+        </div>
+
+        <div class="bonus-grid">
+          <article class="bonus-card">
+            <span class="bonus-token">+3</span>
+            <div>
+              <h4>Mid-range or sustainable brands</h4>
+              <p>Calvin Klein, Massimo Dutti, Mud Jeans, Patagonia and similar.</p>
+            </div>
+          </article>
+
+          <article class="bonus-card">
+            <span class="bonus-token">+8</span>
+            <div>
+              <h4>Designer or rare vintage</h4>
+              <p>Designer brands, unique pieces and rare vintage finds.</p>
+            </div>
+          </article>
+
+          <article class="bonus-card bonus-card-dark">
+            <span class="bonus-token">+20</span>
+            <div>
+              <h4>High-end luxury brands</h4>
+              <p>Gucci, Prada, Chanel and other luxury labels.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+
+
+      <div class="extra-points-card">
+        <div class="point-token point-token-small">+2</div>
+        <div>
+          <p class="point-kicker">Extra Points</p>
+          <h3 class="point-title">New tags or natural fabrics</h3>
+          <p class="point-desc">Brand new with tags or made from silk, linen, wool or 100% cotton.</p>
+        </div>
+      </div>
+
+
+      <div class="not-accepted-card">
+        <p class="points-label">Not Accepted</p>
+        <ul>
+          <li>Dirty or worn-out shoes</li>
+          <li>Untagged swimwear or underwear</li>
+          <li>Items with defects, stains or heavy wear</li>
+          <li>Ultra-fast fashion brands such as Shein or Primark</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- =========================================================
+       5. EXAMPLES
+       ========================================================= -->
+    <section class="points-section reveal examples-section">
+    <div class="how-container">
+
+      <h2>Explore previously swapped pieces</h2>
+
+      <p class="section-intro">
+        See how Swap Points can add up depending on the item type, brand and material.
+      </p>
+
+      <div class="examples-marquee">
+        <div class="examples-track">
+
+          <!-- SET 1 -->
+          <div class="examples-set">
+
+            <article class="example-card">
+              <div class="example-top">
+                <div class="example-points">
+                  <span class="example-number">3</span>
+                  <span class="example-label">points</span>
+                </div>
+                <h3>White cotton T-shirt</h3>
+              </div>
+
+              <div class="example-image-wrap">
+                <img src="{{ url_for('static', filename='images/shirt.png') }}" alt="White cotton T-shirt" class="example-img">
+              </div>
+
+              <div class="example-breakdown">
+                <p>1 base point</p>
+                <p>+ 2 natural fabric points</p>
+                <span></span>
+                <p>= 3 points</p>
+              </div>
+            </article>
+
+
+            <article class="example-card">
+              <div class="example-top">
+                <div class="example-points">
+                  <span class="example-number">5</span>
+                  <span class="example-label">points</span>
+                </div>
+                <h3>Patagonia fleece</h3>
+              </div>
+
+              <div class="example-image-wrap">
+                <img src="{{ url_for('static', filename='images/fleece.png') }}" alt="Patagonia fleece" class="example-img">
+              </div>
+
+              <div class="example-breakdown">
+                <p>2 base points</p>
+                <p>+ 3 sustainable brand points</p>
+                <span></span>
+                <p>= 5 points</p>
+              </div>
+            </article>
+
+
+            <article class="example-card">
+              <div class="example-top">
+                <div class="example-points">
+                  <span class="example-number">7</span>
+                  <span class="example-label">points</span>
+                </div>
+                <h3>Silk dress with tags</h3>
+              </div>
+
+              <div class="example-image-wrap">
+                <img src="{{ url_for('static', filename='images/dress.png') }}" alt="Silk dress with tags" class="example-img">
+              </div>
+
+              <div class="example-breakdown">
+                <p>3 base points</p>
+                <p>+ 2 natural fabric points</p>
+                <p>+ 2 new with tags points</p>
+                <span></span>
+                <p>= 7 points</p>
+              </div>
+            </article>
+
+
+            <article class="example-card">
+              <div class="example-top">
+                <div class="example-points">
+                  <span class="example-number">11</span>
+                  <span class="example-label">points</span>
+                </div>
+                <h3>Vintage leather bag</h3>
+              </div>
+
+              <div class="example-image-wrap">
+                <img src="{{ url_for('static', filename='images/bag.png') }}" alt="Vintage leather bag" class="example-img">
+              </div>
+
+              <div class="example-breakdown">
+                <p>3 base points</p>
+                <p>+ 8 rare vintage points</p>
+                <span></span>
+                <p>= 11 points</p>
+              </div>
+            </article>
+
+            <article class="example-card">
+              <div class="example-top">
+                <div class="example-points">
+                  <span class="example-number">23</span>
+                  <span class="example-label">points</span>
+                </div>
+                <h3>Burberry coat</h3>
+              </div>
+
+              <div class="example-image-wrap">
+                <img src="{{ url_for('static', filename='images/coat.png') }}" alt="Vintage leather bag" class="example-img">
+              </div>
+
+              <div class="example-breakdown">
+                <p>3 base points</p>
+                <p>+ 20 high-end brand points</p>
+                <span></span>
+                <p>= 23 points</p>
+              </div>
+            </article>
+
+
+          </div>
+
+
+          <!-- SET 2: duplicate set for seamless movement -->
+          <div class="examples-set">
+
+            <article class="example-card">
+              <div class="example-top">
+                <div class="example-points">
+                  <span class="example-number">3</span>
+                  <span class="example-label">points</span>
+                </div>
+                <h3>White cotton T-shirt</h3>
+              </div>
+
+              <div class="example-image-wrap">
+                <img src="{{ url_for('static', filename='images/shirt.png') }}" alt="White cotton T-shirt" class="example-img">
+              </div>
+
+              <div class="example-breakdown">
+                <p>1 base point</p>
+                <p>+ 2 natural fabric points</p>
+                <span></span>
+                <p>= 3 points</p>
+              </div>
+            </article>
+
+
+            <article class="example-card">
+              <div class="example-top">
+                <div class="example-points">
+                  <span class="example-number">5</span>
+                  <span class="example-label">points</span>
+                </div>
+                <h3>Patagonia fleece</h3>
+              </div>
+
+              <div class="example-image-wrap">
+                <img src="{{ url_for('static', filename='images/fleece.png') }}" alt="Patagonia fleece" class="example-img">
+              </div>
+
+              <div class="example-breakdown">
+                <p>2 base points</p>
+                <p>+ 3 sustainable brand points</p>
+                <span></span>
+                <p>= 5 points</p>
+              </div>
+            </article>
+
+
+            <article class="example-card">
+              <div class="example-top">
+                <div class="example-points">
+                  <span class="example-number">7</span>
+                  <span class="example-label">points</span>
+                </div>
+                <h3>Silk dress with tags</h3>
+              </div>
+
+              <div class="example-image-wrap">
+                <img src="{{ url_for('static', filename='images/dress.png') }}" alt="Silk dress with tags" class="example-img">
+              </div>
+
+              <div class="example-breakdown">
+                <p>3 base points</p>
+                <p>+ 2 natural fabric points</p>
+                <p>+ 2 new with tags points</p>
+                <span></span>
+                <p>= 7 points</p>
+              </div>
+            </article>
+
+
+            <article class="example-card">
+              <div class="example-top">
+                <div class="example-points">
+                  <span class="example-number">11</span>
+                  <span class="example-label">points</span>
+                </div>
+                <h3>Vintage leather bag</h3>
+              </div>
+
+              <div class="example-image-wrap">
+                <img src="{{ url_for('static', filename='images/bag.png') }}" alt="Vintage leather bag" class="example-img">
+              </div>
+
+              <div class="example-breakdown">
+                <p>3 base points</p>
+                <p>+ 8 rare vintage points</p>
+                <span></span>
+                <p>= 11 points</p>
+              </div>
+            </article>
+
+            <article class="example-card">
+              <div class="example-top">
+                <div class="example-points">
+                  <span class="example-number">23</span>
+                  <span class="example-label">points</span>
+                </div>
+                <h3>Burberry coat</h3>
+              </div>
+
+              <div class="example-image-wrap">
+                <img src="{{ url_for('static', filename='images/coat.png') }}" alt="Vintage leather bag" class="example-img">
+              </div>
+
+              <div class="example-breakdown">
+                <p>3 base points</p>
+                <p>+ 20 high-end brand points</p>
+                <span></span>
+                <p>= 23 points</p>
+              </div>
+            </article>
+
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- =========================================================
+       6. FAQS
+       ========================================================= -->
+  <section class="faq-section reveal">
+    <div class="faq-inner">
+      <h2 class="faq-title">FAQs</h2>
+
+      <div class="faq-list">
+        {% set faqs = [
+          ("What clothes can I bring?", "Bring clean, good-quality clothes, shoes, bags and accessories that someone else would be excited to wear."),
+          ("What clothes are not accepted?", "We don’t accept dirty items, damaged pieces, stained clothing, heavily worn shoes, underwear, untagged swimwear or ultra-fast fashion brands."),
+          ("Do my clothes need to be branded?", "No. Unbranded pieces are welcome as long as they are clean and in good condition. Branded, designer, vintage or natural-fabric pieces may receive extra points."),
+          ("How are my clothes given points?", "Items are given points based on their type, condition, brand and fabric. Basic pieces receive fewer points, while statement, designer or luxury items can receive more."),
+          ("Can I bring shoes and bags?", "Yes. Shoes, boots and bags are accepted when they are clean, wearable and in good condition."),
+          ("What happens to clothes that are not swapped?", "Any leftover pieces are kept for future swaps, donated or responsibly recycled so they avoid going to waste.")
+        ] %}
+
+        {% for question, answer in faqs %}
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>{{ question }}</span>
+            <span class="faq-icon">+</span>
+          </button>
+
+          <div class="faq-answer">
+            <p>{{ answer }}</p>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+</main>
+
+{% endblock %}
+

@@ -1,0 +1,295 @@
+{% extends "base.html" %}
+
+{% block title %}Home | The Swap Club{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+{% endblock %}
+
+{% block content %}
+
+<!-- ─── HERO SECTION ─── -->
+<section class="hero-section">
+  <div class="hero-image">
+    <div class="hero-text">
+      <h1 class="hero-headline">Swapping is the<br>new shopping!</h1>
+      <p class="hero-tagline">The Swap Club is a community-driven space.<br>We're on a mission to help people consume less,<br>share more, and feel good doing it.</p>
+      <div class="hero-btns">
+        <a href="/community" class="btn btn-lime">Join the Community</a>
+        <a href="/events" class="btn btn-outline-light">Events</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Stats bar pinned at bottom of hero -->
+  <div class="stats-bar">
+    <div class="stat-item">
+      <span class="stat-num">42</span>
+      <span class="stat-label">Events Hosted</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">2755</span>
+      <span class="stat-label">Swappers</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">40K</span>
+      <span class="stat-label">Items Swapped</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">26K</span>
+      <span class="stat-label">Kg Waste Saved</span>
+    </div>
+  </div>
+</section>
+
+
+<!-- ─── ABOUT SECTION ─── -->
+<section class="about-section">
+  <div class="about-grid">
+    <div class="about-image-wrap">
+      <img src="{{ url_for('static', filename='images/about-image.jpg') }}" alt="The Swap Club community" class="about-img">
+    </div>
+    <div class="about-text">
+      <h2 class="about-title">The Swap Club</h2>
+      <p class="about-story-label">Story</p>
+      <p class="about-body">The Swap Club is a sustainable, community-driven space where people can exchange clothes, reduce waste, and discover unique fashion pieces.</p>
+      <p class="about-body">We believe fashion should be shared, circular, and accessible to everyone.</p>
+      <div class="about-socials">
+        <a href="https://instagram.com" class="social-link" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://tiktok.com" class="social-link" target="_blank" rel="noopener">TikTok</a>
+        <a href="#" class="social-link">Apple Store</a>
+      </div>
+      <a href="/how" class="btn btn-teal">Learn More</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ─── HOW IT WORKS — SCROLL-SNAP STEPS ─── -->
+<section class="steps-outer" id="how-it-works">
+  <!-- Fixed sidebar progress (desktop) -->
+  <div class="steps-sidebar">
+    <div class="steps-progress-track">
+      <div class="steps-progress-fill" id="stepsFill"></div>
+    </div>
+    <div class="steps-nav">
+      <button class="step-nav-btn active" data-step="0">
+        <span class="step-nav-dot"></span>
+        <span class="step-nav-label">Bring Your Items</span>
+      </button>
+      <button class="step-nav-btn" data-step="1">
+        <span class="step-nav-dot"></span>
+        <span class="step-nav-label">Earn Points</span>
+      </button>
+      <button class="step-nav-btn" data-step="2">
+        <span class="step-nav-dot"></span>
+        <span class="step-nav-label">Browse &amp; Shop</span>
+      </button>
+      <button class="step-nav-btn" data-step="3">
+        <span class="step-nav-dot"></span>
+        <span class="step-nav-label">After the Event</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Scroll-snap container -->
+  <div class="steps-scroll" id="stepsScroll">
+
+    <div class="step-slide" data-index="0">
+      <div class="step-content">
+        <div class="step-image-wrap">
+          <img src="{{ url_for('static', filename='images/clothes1.jpg') }}" alt="Bring your items" class="step-img">
+        </div>
+        <div class="step-text">
+          <span class="step-number">1</span>
+          <h3 class="step-title">Bring Your Items</h3>
+          <p class="step-body">Bring your clean and good quality pre-loved items to our events.</p>
+          <a href="/events" class="btn btn-teal">Find an Event</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="step-slide" data-index="1">
+      <div class="step-content">
+        <div class="step-image-wrap">
+          <img src="{{ url_for('static', filename='images/clothes2.jpg') }}" alt="Earn points" class="step-img">
+        </div>
+        <div class="step-text">
+          <span class="step-number">2</span>
+          <h3 class="step-title">Earn Points</h3>
+          <p class="step-body">Earn swap points to your personalised digital wallet according to quality and type of item. <a href="/how" class="inline-link">Learn More.</a></p>
+          <a href="/how" class="btn btn-teal">Learn More</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="step-slide" data-index="2">
+      <div class="step-content">
+        <div class="step-image-wrap">
+          <img src="{{ url_for('static', filename='images/clothes3.jpg') }}" alt="Browse and shop" class="step-img">
+        </div>
+        <div class="step-text">
+          <span class="step-number">3</span>
+          <h3 class="step-title">Let's the Swapping Begin!</h3>
+          <p class="step-body">Bring your clean and good quality pre-loved items to our events.</p>
+          <a href="/events" class="btn btn-teal">Find an Event</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="step-slide" data-index="3">
+      <div class="step-content">
+        <div class="step-image-wrap">
+          <img src="{{ url_for('static', filename='images/clothes4.jpg') }}" alt="After the event" class="step-img">
+        </div>
+        <div class="step-text">
+          <span class="step-number">4</span>
+          <h3 class="step-title">After the Event</h3>
+          <p class="step-body">Go home with feel-good feels, no money spent, just good vibes. And use your left over points for the next event!</p>
+          <a href="/community" class="btn btn-teal">Join the Community</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ─── JOIN THE CLUB ─── -->
+<section class="join-section">
+  <div class="join-inner">
+    <h2 class="join-title">Join the Club</h2>
+    <p class="join-sub">From bookmarked evenings, to fly workshops at swap events. There's a way to experience the Swap Club for everyone.</p>
+
+    <div class="tiers-grid">
+      <div class="tier-card">
+        <div class="tier-badge">Free</div>
+        <p class="tier-desc">What is included blablabla</p>
+        <a href="/events" class="btn btn-teal-outline">Join the Events →</a>
+      </div>
+      <div class="tier-card tier-featured">
+        <div class="tier-badge">Basic</div>
+        <p class="tier-desc">What is included blablabla</p>
+        <a href="/community" class="btn btn-teal">Join the Community →</a>
+      </div>
+      <div class="tier-card">
+        <div class="tier-badge">Premium</div>
+        <p class="tier-desc">What is included blablabla</p>
+        <a href="/community" class="btn btn-teal-outline">Join the Community →</a>
+      </div>
+    </div>
+
+    <div class="join-cta-row">
+      <a href="/business" class="btn btn-dark">Business Events</a>
+      <a href="/business" class="btn btn-lime">Become a Partner</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ─── THE COMMUNITY ─── -->
+<section class="community-section">
+  <div class="community-inner">
+    <h2 class="community-title">The Community</h2>
+    <p class="community-body">Swap at Swap Events and Swap and Swap and Swap and Swap. Create that Closer that Closer that Closer that Closer loyalty to our.</p>
+
+    <div class="community-grid">
+      <img src="{{ url_for('static', filename='images/community1.jpg') }}" alt="Community" class="community-img community-img-large">
+      <div class="community-img-col">
+        <img src="{{ url_for('static', filename='images/community2.jpg') }}" alt="Community" class="community-img">
+        <img src="{{ url_for('static', filename='images/community3.jpg') }}" alt="Community" class="community-img">
+      </div>
+      <div class="community-img-col">
+        <img src="{{ url_for('static', filename='images/community4.jpg') }}" alt="Community" class="community-img">
+        <img src="{{ url_for('static', filename='images/community5.jpg') }}" alt="Community" class="community-img">
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ─── FAQS ─── -->
+<section class="faq-section">
+  <div class="faq-inner">
+    <h2 class="faq-title">FAQs</h2>
+    <div class="faq-list">
+      {% set faqs = [
+        ("What is The Swap Club?", "The Swap Club is a community-driven platform where people exchange clothes at curated events, reducing waste and refreshing wardrobes sustainably."),
+        ("How do I join an event?", "Browse our events page, select an event near you, and sign up. Free members can attend events; Community members get early access."),
+        ("What items can I bring?", "Clean, good-quality clothing and accessories you no longer wear. We don't accept items with damage, stains, or missing buttons."),
+        ("How do swap points work?", "When you bring items to an event, you earn points based on the quality and type. Use those points to take home new-to-you pieces."),
+        ("Is there a membership fee?", "Events are free to attend. Our Community membership unlocks extra perks like early access, the app, and exclusive swaps."),
+        ("What happens to unclaimed items?", "Leftover items are donated to local charities and textile recyclers — nothing goes to waste."),
+        ("Do you host business events?", "Yes! We partner with companies to run sustainability-focused swap events for teams and corporate groups."),
+        ("Where are events held?", "Currently across Amsterdam and growing. Follow our Instagram or check the events page for the latest locations."),
+        ("Can I swap online?", "Our app lets you track points and browse, but swaps happen in person at events to keep the community spirit alive.")
+      ] %}
+      {% for question, answer in faqs %}
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <span>{{ question }}</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>{{ answer }}</p>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% endblock %}
+
+{% block extra_js %}
+<script>
+  // ─── SCROLL-SNAP STEPS ───
+  const stepsScroll = document.getElementById('stepsScroll');
+  const stepNavBtns = document.querySelectorAll('.step-nav-btn');
+  const stepsFill = document.getElementById('stepsFill');
+  const totalSteps = 4;
+
+  function updateActiveStep(index) {
+    stepNavBtns.forEach((btn, i) => {
+      btn.classList.toggle('active', i === index);
+    });
+    const pct = ((index) / (totalSteps - 1)) * 100;
+    stepsFill.style.height = pct + '%';
+  }
+
+  // Scroll-snap scroll listener
+  stepsScroll.addEventListener('scroll', () => {
+    const slideH = stepsScroll.clientHeight;
+    const scrollTop = stepsScroll.scrollTop;
+    const index = Math.round(scrollTop / slideH);
+    updateActiveStep(Math.min(index, totalSteps - 1));
+  });
+
+  // Nav button click: scroll to step
+  stepNavBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const i = parseInt(btn.dataset.step);
+      stepsScroll.scrollTo({ top: i * stepsScroll.clientHeight, behavior: 'smooth' });
+    });
+  });
+
+  // ─── FAQ ACCORDION ───
+  document.querySelectorAll('.faq-question').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const item = btn.parentElement;
+      const isOpen = item.classList.contains('open');
+      // Close all
+      document.querySelectorAll('.faq-item').forEach(el => {
+        el.classList.remove('open');
+        el.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+        el.querySelector('.faq-icon').textContent = '+';
+      });
+      if (!isOpen) {
+        item.classList.add('open');
+        btn.setAttribute('aria-expanded', 'true');
+        btn.querySelector('.faq-icon').textContent = '×';
+      }
+    });
+  });
+</script>
+{% endblock %}

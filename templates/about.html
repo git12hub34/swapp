@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% block title %}About | The Swap Club{% endblock %}
+
+{% block extra_css %}
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/about.css') }}">
+{% endblock %}
+
+{% block content %}
+
+
+<div class="container">
+  <div id="image-slider" class="splide">
+    <div class="splide__track">
+      <ul class="splide__list">
+        <li class="splide__slide">          
+          <img src="images/image01.jpeg" alt="Image 1">
+        </li>
+        <li class="splide__slide">
+          <img src="images/image02.jpeg" alt="Image 2">
+        </li>
+        <li class="splide__slide">
+          <img src="images/image03.jpeg" alt="Image 3">
+        </li>
+      </ul>
+    </div>
+  </div>
+  <section id="slider-text">
+    <p>The Swap Club is a sustainable, community-driven space.</p>
+    <p>We’re on a mission to help people consume less, share more, and feel good doing it.</p>
+  </section>
+
+  <section id="about-content">
+    <h2>community</h2>
+    <p>We started with one simple idea: people have so much to give and even more to gain, when they swap, not shop.</p>
+    <p>Today, The Swap Club is a growing movement of people who come together to shop more sustainably with their fashion, accessories, and much more. Whether you’re here to refresh your closet, make new friends, or just try something new; everyone is welcome!</p>
+  </section>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    new Splide('#image-slider', {
+      type: 'loop',
+      autoplay: true,
+      interval: 3000,
+    }).mount();
+  });
+</script>
+
+{% endblock %}

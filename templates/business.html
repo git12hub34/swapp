@@ -1,0 +1,81 @@
+{% extends "base.html" %}
+{% block title %}Business Events | The Swap Club{% endblock %}
+
+{% block extra_css %}
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/business.css') }}">
+{% endblock %}
+
+{% block content %}
+
+
+<body>
+  <div class="container">
+    <h1>Let's bring people together by swapping.</h1>
+    <h2>1 Your Vision</h2>
+    <p>You have an idea to collaborate, host an event, or integrate our circular fashion model with your organization.</p>
+
+    <h2>2 Contact Us</h2>
+    <p>Share your vision with us. We'll explore how our community and expertise can align with your goals.</p>
+    <p>We partner with organizations, brands, and communities to promote sustainable style through events, unique collaborations, and shared products. Interested in joining the movement?</p>
+
+    <h2>3 The Exchange</h2>
+    <p>We execute the project, ensuring a seamless, sustainable, and impactful collaboration for your audience.</p>
+
+    <h2>Our Partners</h2>
+    <div id="image-slider" class="splide">
+      <div class="splide__track">
+        <ul class="splide__list">url('../images/hero_image.JPG')
+          <li class="splide__slide" style="background-image: url('..'/logos/logo.02.jpg')"></li>
+          <li class="splide__slide" style="background-image: url('..'/logos/logo01.png')"></li>
+          <li class="splide__slide" style="background-image: url('..'/logos/logo03.png')"></li>
+          <li class="splide__slide" style="background-image: url('..'/logos/logo04.png')"></li>
+          <li class="splide__slide" style="background-image: url('..'/logos/logo05.png')"></li>
+          <li class="splide__slide" style="background-image: url('..'/logos/logo06.png')"></li>
+          <li class="splide__slide" style="background-image: url('..'/logos/logo07.png')"></li>
+          <li class="splide__slide" style="background-image: url('..'/logos/logo08.png')"></li>
+          <li class="splide__slide" style="background-image: url('..'/logos/logo09.jfif')"></li>
+          <li class="splide__slide" style="background-image: url('..'/logos/logo10.png')"></li>
+          <li class="splide__slide" style="background-image: url('..'/logos/logo11.png')"></li>
+          <li class="splide__slide" style="background-image: url('..'/logos/logo12.png')"></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <h2>Contact Us</h2>
+    <form action="mailto:milanhulac1@gmail.com" method="post" enctype="text/plain">
+      <label for="firstname">First Name:</label>
+      <input type="text" id="firstname" name="firstname"><br><br>
+
+      <label for="lastname">Last Name:</label>
+      <input type="text" id="lastname" name="lastname"><br><br>
+
+      <label for="email">Email Address:</label>
+      <input type="email" id="email" name="email"><br><br>
+
+      <label for="message">Message:</label>
+      <textarea id="message" name="message"></textarea><br><br>
+
+      <input type="submit" value="Submit">
+    </form>
+  </div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      new Splide('#image-slider', {
+        type: 'loop',
+        autoplay: true,
+        interval: 1500,
+        perPage: 5,
+        gap: '10px',
+        arrows: false,
+        pagination: false,
+      }).mount();
+    });
+  </script>
+
+
+{% endblock %}
