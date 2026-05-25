@@ -1,0 +1,1082 @@
+
+.reveal {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* =========================================================
+   1. PAGE BASE
+   ========================================================= */
+
+.how-page {
+  background: var(--warm-white);
+  color: var(--text-dark);
+}
+
+
+/* =========================================================
+   2. HERO SECTION
+   ========================================================= */
+
+.events-hero {
+  margin-top: 60px;
+  width: 100%;
+  min-height: 85vh;
+  background: var(--cream);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 80px;
+  padding: 120px 8%;
+}
+
+.events-hero-text {
+  flex: 1;
+}
+
+.page-label,
+.section-label {
+  font-family: var(--font-body);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--dark-brown);
+  margin-bottom: 16px;
+}
+
+.events-hero-text h1 {
+  font-family: var(--font-display);
+  font-size: 6rem;
+  line-height: 1;
+  color: var(--teal);
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+
+.events-hero-text p {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--text-dark);
+  max-width: 560px;
+  margin-bottom: 30px;
+}
+
+
+/* Hero step summary box */
+
+.events-hero-summary {
+  flex: 1;
+  background: var(--lime);
+  border-radius: 20px;
+  padding: 40px;
+}
+
+.event-flow-list {
+  list-style: none;
+  counter-reset: event-step;
+  padding: 0;
+  margin: 0;
+}
+
+.event-flow-list li {
+  counter-increment: event-step;
+
+  font-family: var(--font-body);
+  font-weight: 700;
+  color: var(--dark-brown);
+
+  background: var(--cream);
+  border-radius: 12px;
+
+  padding: 18px;
+  margin-bottom: 14px;
+}
+
+.event-flow-list li::before {
+  content: counter(event-step);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 32px;
+  height: 32px;
+
+  border-radius: 50%;
+  background: var(--teal);
+  color: var(--cream);
+
+  margin-right: 12px;
+}
+
+
+/* =========================================================
+   3. HOW IT WORKS — SCROLL SNAP STEPS
+   ========================================================= */
+
+.steps-outer {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  height: 100vh;
+  background: var(--warm-white);
+  position: relative;
+}
+
+
+/* Sidebar navigation */
+
+.steps-sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+
+  padding: 40px 24px 40px 40px;
+  gap: 0;
+
+  background: var(--warm-white);
+  position: sticky;
+  top: 60px;
+  height: calc(100vh - 60px);
+}
+
+.steps-progress-track {
+  width: 2px;
+  height: 180px;
+  background: rgba(26, 74, 74, 0.15);
+  border-radius: 2px;
+
+  position: absolute;
+  left: 40px;
+  top: 50%;
+  transform: translateY(-50%);
+
+  overflow: hidden;
+}
+
+.steps-progress-fill {
+  width: 100%;
+  height: 0%;
+  background: var(--teal);
+  border-radius: 2px;
+  transition: height 0.3s ease;
+}
+
+.steps-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding-left: 20px;
+}
+
+.step-nav-btn {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  background: none;
+  border: none;
+  cursor: pointer;
+
+  padding: 0;
+  text-align: left;
+}
+
+.step-nav-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+
+  background: rgba(26, 74, 74, 0.2);
+  border: 2px solid rgba(26, 74, 74, 0.2);
+
+  flex-shrink: 0;
+  transition: background 0.25s, border-color 0.25s;
+}
+
+.step-nav-label {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+
+  color: rgba(26, 74, 74, 0.4);
+  transition: color 0.25s;
+}
+
+.step-nav-btn.active .step-nav-dot {
+  background: var(--teal);
+  border-color: var(--teal);
+}
+
+.step-nav-btn.active .step-nav-label {
+  color: var(--teal);
+}
+
+
+/* Scroll container and slides */
+
+.steps-scroll {
+  height: calc(100vh - 60px);
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.steps-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.step-slide {
+  height: calc(100vh - 60px);
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+
+  display: flex;
+  align-items: center;
+
+  padding: 60px 6% 60px 60px;
+}
+
+.step-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+
+  width: 100%;
+  max-width: 900px;
+}
+
+.step-image-wrap {
+  border-radius: 14px;
+  overflow: hidden;
+  aspect-ratio: 3 / 4;
+  background: var(--lime);
+}
+
+.step-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+
+/* Step text */
+
+.step-number {
+  display: block;
+
+  font-family: var(--font-display);
+  font-size: 7rem;
+  color: var(--lime);
+  line-height: 0.85;
+
+  margin-bottom: 12px;
+}
+
+.step-title {
+  font-family: var(--font-display);
+  font-size: 2.4rem;
+  color: var(--teal);
+  text-transform: uppercase;
+  line-height: 1.05;
+
+  margin-bottom: 16px;
+}
+
+.step-body {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--text-mid);
+
+  margin-bottom: 32px;
+}
+
+
+/* =========================================================
+   4. WHAT ARE SWAP POINTS?
+   ========================================================= */
+
+.about-section {
+  background: var(--warm-white);
+  padding: 100px 6%;
+}
+
+.about-inner {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+
+.about-title {
+  font-family: var(--font-display);
+  font-size: 4.5rem;
+  color: var(--teal);
+  text-transform: uppercase;
+  line-height: 1;
+  margin-bottom: 15px;
+}
+
+.about-sub {
+  font-family: var(--font-display);
+  font-size: 2.5rem;
+  color: var(--teal);
+  text-transform: uppercase;
+  line-height: 1;
+  margin-bottom: 10px;
+  margin-top: 30px
+}
+
+.about-label {
+  font-family: var(--font-body);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--dark-brown);
+  margin-bottom: 16px;
+}
+
+/*font-family: var(--text-white);
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--teal-mid);
+
+  margin-bottom: 20px;
+
+  font-size: 15px;
+  line-height: 1.75;
+  color: var(--teal-mid);
+
+  margin-bottom: 14px;
+*/
+
+.about-body {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--text-mid);
+  max-width: 560px;
+  margin-bottom: 30px;
+}
+
+
+/* =========================================================
+   5. POINT SYSTEM
+   NOTE: .points-section is also used by the Examples section.
+   ========================================================= */
+
+.points-section {
+  background: var(--cream);
+  padding: 100px 6%;
+}
+
+.points-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+
+/* Section headings */
+
+.points-heading,
+.bonus-heading {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.points-heading h3,
+.bonus-title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 3.4rem);
+  color: var(--teal);
+  text-transform: uppercase;
+  line-height: 1;
+
+  margin: 0 auto 8px;
+  text-align: center;
+}
+
+.points-heading p,
+.bonus-subtitle {
+  font-family: var(--font-body);
+  font-size: 14px;
+  color: var(--text-mid);
+  text-align: center;
+
+  margin: 0;
+}
+
+.points-label {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--teal-mid);
+
+  margin-bottom: 12px;
+}
+
+
+/* Base point cards */
+
+.points-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.point-card {
+  background: var(--warm-white);
+  border-radius: 14px;
+  padding: 32px 28px;
+  border: 1.5px solid transparent;
+  min-height: 280px;
+
+  display: flex;
+  flex-direction: column;
+
+  transition: transform 0.2s, border-color 0.2s;
+}
+
+.point-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--teal);
+}
+
+.point-card-featured {
+  border-color: var(--teal);
+  background: var(--warm-white);
+}
+
+.point-token {
+  width: 74px;
+  height: 74px;
+  border-radius: 50%;
+  background: var(--lime);
+  color: var(--teal);
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  font-family: var(--font-display);
+  font-size: 2.4rem;
+  line-height: 1;
+
+  margin-bottom: 22px;
+}
+
+.point-token-small {
+  width: 68px;
+  height: 68px;
+  font-size: 2rem;
+  flex-shrink: 0;
+
+  margin-bottom: 0;
+}
+
+.point-kicker {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--teal-mid);
+
+  margin-bottom: 10px;
+}
+
+.point-title {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  color: var(--teal);
+  text-transform: uppercase;
+  line-height: 1;
+
+  margin-bottom: 16px;
+}
+
+.point-desc {
+  font-size: 14px;
+  line-height: 1.65;
+  color: var(--text-mid);
+}
+
+
+/* Bonus point cards */
+
+.bonus-wrap {
+  margin-top: 72px;
+}
+
+.bonus-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.bonus-card {
+  background: var(--warm-white);
+  border-radius: 14px;
+  padding: 24px;
+  border: 1.5px solid rgba(26, 74, 74, 0.12);
+
+  display: flex;
+  gap: 18px;
+  align-items: flex-start;
+}
+
+.bonus-token {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: var(--teal);
+  color: var(--cream);
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  line-height: 1;
+
+  flex-shrink: 0;
+}
+
+.bonus-card h4 {
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--teal);
+  line-height: 1.4;
+
+  margin-bottom: 8px;
+}
+
+.bonus-card p {
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--text-mid);
+}
+
+.bonus-card-dark {
+  background: var(--teal);
+  border-color: var(--teal);
+}
+
+.bonus-card-dark h4 {
+  color: var(--lime);
+}
+
+.bonus-card-dark p {
+  color: rgba(232, 232, 200, 0.78);
+}
+
+.bonus-card-dark .bonus-token {
+  background: var(--lime);
+  color: var(--teal);
+}
+
+
+/* Extra points and not accepted */
+
+.extra-points-card {
+  background: var(--lime);
+  border-radius: 14px;
+  padding: 28px;
+  margin-top: 56px;
+
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.extra-points-card .point-token {
+  background: var(--teal);
+  color: var(--cream);
+}
+
+.extra-points-card .point-kicker,
+.extra-points-card .point-title,
+.extra-points-card .point-desc {
+  color: var(--teal);
+}
+
+.not-accepted-card {
+  background: var(--warm-white);
+  border-radius: 14px;
+  padding: 32px 28px;
+  margin-top: 56px;
+  border-left: 6px solid var(--teal);
+}
+
+.not-accepted-card ul {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px 28px;
+
+  margin: 0;
+  padding-left: 18px;
+}
+
+.not-accepted-card li {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--text-mid);
+}
+
+
+/* =========================================================
+   6. EXAMPLES MARQUEE
+   ========================================================= */
+
+
+.examples-section {
+  background: var(--warm-white);
+}
+
+.points-section h2 {
+  text-align: center;
+  font-family: var(--font-display);
+  font-size: clamp(20px, 7vw, 40px);
+  line-height: 1;
+  color: var(--teal);
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.about-sub {
+  font-family: var(--font-display);
+  font-size: 2.5rem;
+  color: var(--teal);
+  text-transform: uppercase;
+  line-height: 1;
+  margin-bottom: 10px;
+  margin-top: 30px
+}
+
+
+.section-intro {
+  max-width: 620px;
+  margin: 18px auto 0;
+  padding: 0 24px;
+  text-align: center;
+  font-size: 17px;
+  line-height: 1.6;
+  color: var(--text-mid);
+}
+
+.examples-marquee {
+  --card-width: 300px;
+  --card-gap: 18px;
+  --card-count: 4;
+  --marquee-speed: 28s;
+
+  width: 100%;
+  overflow: hidden;
+
+  margin-top: 44px;
+  padding: 18px 0 28px;
+}
+
+.examples-track {
+  display: flex;
+  width: max-content;
+
+  animation: examplesMarquee var(--marquee-speed) linear infinite;
+  will-change: transform;
+}
+
+.examples-set {
+  display: flex;
+  gap: var(--card-gap);
+  flex-shrink: 0;
+}
+
+.examples-set + .examples-set {
+  margin-left: var(--card-gap);
+}
+
+@keyframes examplesMarquee {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(
+      calc(
+        -1 * (
+          (var(--card-width) * var(--card-count)) +
+          (var(--card-gap) * var(--card-count))
+        )
+      )
+    );
+  }
+}
+
+.examples-marquee:hover .examples-track {
+  animation-play-state: paused;
+}
+
+
+/* Example cards */
+
+
+.example-card {
+  width: var(--card-width);
+  min-height: 430px;
+  flex: 0 0 var(--card-width);
+
+  border-radius: 14px;
+  background: var(--teal);
+  border: 1.5px solid var(--teal);
+
+  padding: 28px;
+  color: var(--cream);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Top: point token + title */
+
+.example-top {
+  display: grid;
+  grid-template-columns: 78px 1fr;
+  gap: 22px;
+  align-items: flex-start;
+}
+
+.example-points {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.example-number {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: var(--lime);
+  color: var(--teal);
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  font-family: var(--font-display);
+  font-size: 2.25rem;
+  line-height: 1;
+}
+
+.example-label {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--lime);
+  margin-top: 10px;
+}
+
+.example-card h3 {
+  font-family: var(--font-body);
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--lime);
+  line-height: 1.4;
+
+  margin: 6px 0 0;
+}
+
+/* Middle: image gets lots of space */
+
+.example-image-wrap {
+  height: 170px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 28px 0 24px;
+}
+
+.example-img {
+  max-width: 88%;
+  max-height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+
+.example-breakdown {
+  font-family: var(--font-body);
+  color: var(--cream);
+  font-size: 0.95rem;
+  line-height: 1.55;
+  letter-spacing: 0;
+}
+
+.example-breakdown p {
+  margin: 0;
+  color: var(--cream);
+}
+
+.example-breakdown span {
+  display: block;
+  width: 78%;
+  border-top: 1.5px dashed var(--cream);
+  margin: 7px 0;
+}
+
+/* =========================================================
+   7. FAQS
+   ========================================================= */
+
+.faq-section {
+  background: var(--warm-white);
+  padding: 100px 6%;
+}
+
+.faq-inner {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.faq-title {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  color: var(--teal);
+  text-transform: uppercase;
+
+  margin-bottom: 48px;
+}
+
+.faq-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.faq-item {
+  border-bottom: 1px solid rgba(26, 74, 74, 0.15);
+}
+
+.faq-question {
+  width: 100%;
+
+  background: none;
+  border: none;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+
+  padding: 20px 0;
+
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--teal);
+  text-align: left;
+}
+
+.faq-icon {
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: var(--teal);
+
+  flex-shrink: 0;
+  width: 24px;
+  text-align: center;
+
+  transition: transform 0.2s;
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+
+  transition: max-height 0.35s ease, padding 0.35s ease;
+}
+
+.faq-answer p {
+  font-size: 14px;
+  line-height: 1.75;
+  color: var(--text-mid);
+
+  padding-bottom: 20px;
+}
+
+.faq-item.open .faq-answer {
+  max-height: 300px;
+}
+
+.faq-item.open .faq-icon {
+  transform: rotate(0deg);
+}
+
+
+/* =========================================================
+   8. RESPONSIVE
+   ========================================================= */
+
+/*
+@media (max-width: 900px) {
+  .points-grid,
+  .bonus-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .point-card {
+    min-height: auto;
+  }
+
+  .not-accepted-card ul {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 700px) {
+  .examples-marquee {
+    --card-width: 260px;
+    --card-gap: 16px;
+    --marquee-speed: 24s;
+  }
+
+  .example-card {
+    min-height: 410px;
+    padding: 22px;
+  }
+
+  .example-top {
+    grid-template-columns: 82px 1fr;
+    gap: 14px;
+  }
+
+  .example-number {
+    width: 64px;
+    height: 64px;
+    font-size: 2rem;
+  }
+
+  .example-label {
+    font-size: 1rem;
+    margin-top: 12px;
+  }
+
+  .example-card h3 {
+    margin-top: 20px;
+    font-size: 1.15rem;
+  }
+
+  .example-image-wrap {
+    height: 150px;
+  }
+
+  .example-breakdown {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .events-hero {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 40px;
+
+    padding: 90px 6%;
+  }
+
+  .events-hero-text h1 {
+    font-size: 3.5rem;
+  }
+
+  .steps-outer {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+
+  .steps-sidebar {
+    display: none;
+  }
+
+  .steps-scroll {
+    height: auto;
+    overflow: visible;
+    scroll-snap-type: none;
+  }
+
+  .step-slide {
+    height: auto;
+    scroll-snap-align: none;
+    padding: 60px 6%;
+  }
+
+  .step-content {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .step-image-wrap {
+    aspect-ratio: 4 / 3;
+  }
+
+  .step-number {
+    font-size: 5rem;
+  }
+
+  .points-section {
+    padding: 72px 6%;
+  }
+
+  .extra-points-card {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .point-card,
+  .bonus-card,
+  .extra-points-card,
+  .not-accepted-card {
+    border-radius: 12px;
+  }
+
+  .faq-section {
+    padding: 72px 6%;
+  }
+}
+*/
+
+
+@media (max-width: 600px) {
+  .hero-inner { padding: 60px 6% 140px; }
+  .hero-headline { font-size: 2.6rem; }
+  .stats-bar { grid-template-columns: 1fr 1fr; }
+  .about-section, .join-section, .community-section, .faq-section { padding: 72px 6%; }
+  .community-grid { grid-template-columns: 1fr; }
+  .community-img-large { grid-column: auto; }
+}
