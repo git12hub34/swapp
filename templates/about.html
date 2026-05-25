@@ -7,10 +7,6 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
 {% endblock %}
 
-{% block extra_js %}
-<script src="{{ url_for('static', filename='js/base.js') }}"></script>
-{% endblock %}
-
 {% block content %}
 
 <div class="container">
@@ -50,12 +46,13 @@
     <div id="slider-text">
 
       <h1>
-      The Swap Club is a sustainable,community-driven space.
+      The Swap Club is a sustainable, community-driven space.
       </h1>
 
-      <h1>
+      <p>
         We're on a mission to help people consume less, share more, and feel good doing it.
-      </h1>
+      </p>
+
 
     </div>
 
@@ -82,18 +79,28 @@
 
   <!-- ABOUT CONTENT -->
   <section id="about-content" class="about-content">
+
+  <img src="{{ url_for('static', filename='images/About_1.jpg') }}" alt="Swap event" class="side-image left">
+
+  <div class="about-text">
     <h2>Our Mission</h2>
+
     <p>
       We started with one simple idea: people have so much to give
       and even more to gain when they swap, not shop.
     </p>
+
     <p>
       Today, The Swap Club is a growing movement of people who come together
       to shop more sustainably with fashion, accessories, and much more.
       Whether you’re here to refresh your closet, make new friends,
       or simply try something new — everyone is welcome.
     </p>
-  </section>
+  </div>
+
+  <img src="{{ url_for('static', filename='images/About_2.jpg') }}" alt="Community fashion swap" class="side-image right">
+
+</section>
   
   <!--Articles-->
 <section id="articles" class="articles">
@@ -111,6 +118,7 @@
       >
 
       <h3>Het Parool</h3>
+      <p>Named one of the five places to have a good time</p>
     </a>
     <!-- ARTICLE 2 -->
     <a 
@@ -123,6 +131,7 @@
         alt="Trouw article"
       >
       <h3>Trouw</h3>
+      <p>Featured in a special section on sustainable fashion</p>
     </a>
     <!-- ARTICLE 3 -->
     <a 
@@ -135,6 +144,7 @@
         alt="Nap Nieuws article"
       >
       <h3>Nap Nieuws</h3>
+      <p>Highlights our Community</p>
     </a>
   </div>
 </section>
