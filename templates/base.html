@@ -5,10 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>{% block title %}The Swap Club{% endblock %}</title>
   <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}" />
-
-    <!-- ─── scroll library ─── -->
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!-- libraries -->
+<!-- ─── CSS libraries ─── -->
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
   {% block extra_css %}{% endblock %}
+
 </head>
 <body>
 
@@ -104,7 +106,9 @@
     </div>
   </footer>
 
+   <!-- libraries -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
   <script src="{{ url_for('static', filename='js/base.js') }}"></script>
   {% block extra_js %}{% endblock %}
 

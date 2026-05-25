@@ -1,27 +1,23 @@
 {% extends "base.html" %}
-
 {% block title %}About | The Swap Club{% endblock %}
 
 {% block extra_css %}
 <link rel="stylesheet" href="{{ url_for('static', filename='css/about.css') }}">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
 {% endblock %}
 
 {% block content %}
 
+
+
 <div class="container">
 
-  <!-- IMAGE SLIDER -->
+  <!-- HERO SECTION -->
   <section id="image-slider" class="splide">
-
     <div class="splide__track">
-
       <ul class="splide__list">
-
         <li class="splide__slide">
           <img 
             src="{{ url_for('static', filename='images/Swap Club Image 02.jpeg') }}" 
-      
           >
         </li>
 
@@ -32,12 +28,8 @@
         </li>
 
         <li class="splide__slide">
-          <img 
-            src="{{ url_for('static', filename='images/SwapClub Image 01.jpeg') }}" 
-      
-          >
+          <img src="{{ url_for('static', filename='images/SwapClub Image 01.jpeg') }}" >
         </li>
-
       </ul>
 
     </div>
@@ -77,95 +69,130 @@
     </div>
   </div>
 
-  <!-- ABOUT CONTENT -->
-  <section id="about-content" class="about-content">
 
-  <img src="{{ url_for('static', filename='images/About_1.jpg') }}" alt="Swap event" class="side-image left">
+<!-- ABOUT SECTION -->
+<section class="about-section">
+  <div class="about-grid">
 
-  <div class="about-text">
-    <h2>Our Mission</h2>
+    <div class="about-founder-card">
+      <div class="founder-card-list">
 
-    <p>
-      We started with one simple idea: people have so much to give
-      and even more to gain when they swap, not shop.
-    </p>
+        <div class="founder-card-feature">
+          <div class="founder-card-image">
+            <img src="{{ url_for('static', filename='images/megan.jpg') }}" alt="Megan">
+          </div>
 
-    <p>
-      Today, The Swap Club is a growing movement of people who come together
-      to shop more sustainably with fashion, accessories, and much more.
-      Whether you’re here to refresh your closet, make new friends,
-      or simply try something new — everyone is welcome.
-    </p>
+          <p class="founder-card-title">Megan</p>
+          <p class="founder-card-desc">
+            Co-founder
+          </p>
+        </div>
+
+        <div class="founder-card-feature">
+          <div class="founder-card-image">
+            <img src="{{ url_for('static', filename='images/gotcke.jpg') }}" alt="Götcke">
+          </div>
+
+          <p class="founder-card-title">Götcke</p>
+          <p class="founder-card-desc">
+            Co-founder
+          </p>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="about-text">
+      <h2 class="about-title">Our Mission</h2>
+      <p class="about-story-label">About us</p>
+
+      <p class="about-body">
+        We started with one simple idea: people have so much to give and even more to gain when they swap, not shop.
+      </p>
+
+      <p class="about-body">
+        Today, The Swap Club is a growing movement of people who come together to shop more sustainably with fashion, accessories, and much more. Whether you’re here to refresh your closet, make new friends, or simply try something new — everyone is welcome.
+      </p>
+
+      <div class="about-socials">
+        <a href="https://instagram.com" class="social-link" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://tiktok.com" class="social-link" target="_blank" rel="noopener">TikTok</a>
+      </div>
+    </div>
+
   </div>
-
-  <img src="{{ url_for('static', filename='images/About_2.jpg') }}" alt="Community fashion swap" class="side-image right">
-
 </section>
   
-  <!--Articles-->
-<section id="articles" class="articles">
-  <h2>Articles About Us</h2>
-  <div class="article-list">
-    <!-- ARTICLE 1 -->
-    <a 
-      href="https://www.parool.nl/uit-in-amsterdam/moeite-met-het-wegleggen-van-je-telefoon-op-deze-vijf-plekken-moet-je-wel-en-heb-je-als-het-goed-is-nog-een-leuke-tijd-ook~b716965f/?referrer=https%3A%2F%2Fwww.google.com%2F" 
-      target="_blank" 
-      class="article-card"
-    >
-      <img 
-        src="{{ url_for('static', filename='images/Article01.jpg') }}" 
-        alt="Het Parool article"
-      >
 
-      <h3>Het Parool</h3>
-      <p>Named one of the five places to have a good time</p>
-    </a>
-    <!-- ARTICLE 2 -->
-    <a 
-      href="https://www.trouw.nl/tijdgeest/bij-de-kledingruilclub-loopt-mijn-geliefde-jeans-voorbij-op-kortere-benen~b3570782/?referrer=https%3A%2F%2Fwww.google.com%2F" 
-      target="_blank" 
-      class="article-card"
-    >
-      <img 
-        src="{{ url_for('static', filename='images/Article02.avif') }}" 
-        alt="Trouw article"
+<!-- ARTICLES SECTION -->
+<section id="articles" class="articles">
+  <div class="articles-inner">
+
+    <p class="articles-label">In the press</p>
+    <h2>Articles About Us</h2>
+
+    <div class="article-list">
+
+      <a 
+        href="https://www.parool.nl/uit-in-amsterdam/moeite-met-het-wegleggen-van-je-telefoon-op-deze-vijf-plekken-moet-je-wel-en-heb-je-als-het-goed-is-nog-een-leuke-tijd-ook~b716965f/?referrer=https%3A%2F%2Fwww.google.com%2F" 
+        target="_blank" 
+        rel="noopener"
+        class="article-card"
       >
-      <h3>Trouw</h3>
-      <p>Featured in a special section on sustainable fashion</p>
-    </a>
-    <!-- ARTICLE 3 -->
-    <a 
-      href="https://www.napnieuws.nl/2025/02/12/swap-till-you-drop/" 
-      target="_blank" 
-      class="article-card"
-    >
-      <img 
-        src="{{ url_for('static', filename='images/Article03.avif') }}" 
-        alt="Nap Nieuws article"
+        <div class="article-image-wrap">
+          <img src="{{ url_for('static', filename='images/Article01.jpg') }}" alt="Het Parool article">
+        </div>
+
+        <div class="article-content">
+          <p class="article-source">Het Parool</p>
+          <h3>Five places to have a good time</h3>
+          <p class="article-desc">
+            The Swap Club was named one of the five places where putting your phone away leads to a good time.
+          </p>
+        </div>
+      </a>
+
+      <a 
+        href="https://www.trouw.nl/tijdgeest/bij-de-kledingruilclub-loopt-mijn-geliefde-jeans-voorbij-op-kortere-benen~b3570782/?referrer=https%3A%2F%2Fwww.google.com%2F" 
+        target="_blank" 
+        rel="noopener"
+        class="article-card"
       >
-      <h3>Nap Nieuws</h3>
-      <p>Highlights our Community</p>
-    </a>
+        <div class="article-image-wrap">
+          <img src="{{ url_for('static', filename='images/article2.jpeg') }}" alt="Trouw article">
+        </div>
+
+        <div class="article-content">
+          <p class="article-source">Trouw</p>
+          <h3>A story about clothing swaps</h3>
+          <p class="article-desc">
+            Featured in a special section about sustainable fashion, sharing clothes, and giving pieces a second life.
+          </p>
+        </div>
+      </a>
+
+      <a 
+        href="https://www.napnieuws.nl/2025/02/12/swap-till-you-drop/" 
+        target="_blank" 
+        rel="noopener"
+        class="article-card"
+      >
+        <div class="article-image-wrap">
+          <img src="{{ url_for('static', filename='images/article3.jpeg') }}" alt="Nap Nieuws article">
+        </div>
+
+        <div class="article-content">
+          <p class="article-source">Nap Nieuws</p>
+          <h3>Swap till you drop</h3>
+          <p class="article-desc">
+            A closer look at our community, our events, and why more people are choosing to swap instead of shop.
+          </p>
+        </div>
+      </a>
+
+    </div>
+
   </div>
 </section>
-
-<!-- SPLIDE -->
-<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
-
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-
-  new Splide('#image-slider', {
-    type: 'loop',
-    autoplay: true,
-    interval: 4000,
-    pauseOnHover: false,
-    arrows: false,
-    pagination: false,
-    speed: 1200,
-  }).mount();
-
-});
-</script>
 
 {% endblock %}

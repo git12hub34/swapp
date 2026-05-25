@@ -1,11 +1,23 @@
 
+// Image slider (used in about.html)
+
+document.addEventListener('DOMContentLoaded', function () {
+  new Splide('#image-slider', {
+    type: 'loop',
+    autoplay: true,
+    interval: 4000,
+    pauseOnHover: false,
+    arrows: false,
+    pagination: false,
+    speed: 1200,
+  }).mount();
+});
+
+
+
+
 // scroll effect
-
 AOS.init();
-
-// to sections and/or elements add this 
-//    data-aos="fade-up" 
-
 
 
 // FAQ
@@ -29,8 +41,6 @@ AOS.init();
   });
 
 
-
-
   //  SCROLL-SNAP STEPS 
   const stepsScroll = document.getElementById('stepsScroll');
   const stepNavBtns = document.querySelectorAll('.step-nav-btn');
@@ -44,8 +54,6 @@ AOS.init();
     const pct = ((index) / (totalSteps - 1)) * 100;
     stepsFill.style.height = pct + '%';
   }
-
-  // Scroll-snap scroll listener
   stepsScroll.addEventListener('scroll', () => {
     const slideH = stepsScroll.clientHeight;
     const scrollTop = stepsScroll.scrollTop;
@@ -53,7 +61,6 @@ AOS.init();
     updateActiveStep(Math.min(index, totalSteps - 1));
   });
 
-  // Nav button click: scroll to step
   stepNavBtns.forEach(btn => {
     btn.addEventListener('click', () => {
       const i = parseInt(btn.dataset.step);
@@ -91,7 +98,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Active nav link
     const currentPath = window.location.pathname;
     document.querySelectorAll('a.nav-links, a.nav-cta').forEach(a => {
         if (a.getAttribute('href') === currentPath) {
@@ -99,3 +105,4 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+
