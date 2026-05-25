@@ -9,10 +9,6 @@
   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
 {% endblock %}
 
-{% block extra_js %}
-<script src="{{ url_for('static', filename='js/base.js') }}"></script>
-{% endblock %}
-
 {% block content %}
 
 <!-- ───────── HERO SECTION ───────── -->
@@ -42,8 +38,11 @@
           Learn More
         </a>
       </div>
+
     </div>
+
   </div>
+
 </section>
 
 
@@ -103,60 +102,96 @@
 </div>
 
 <!-- ───────── PARTNERS SECTION ───────── -->
-<div class="partners-section">
-<h2>Our Partners</h2>
-<div id="image-slider" class="splide">
+<section class="partners-section">
+  <h2 class="section-heading">Our Partners</h2>
+  <div id="image-slider" class="splide">
 
   <div class="splide__track">
 
     <ul class="splide__list">
 
-      <li class="splide__slide"
-        style="background-image: url('{{ url_for('static', filename='logos/logo02.jpg') }}')">
+      <li class="splide__slide">
+        <img
+          src="{{ url_for('static', filename='logos/logo.02.jpg') }}"
+          alt="Partner logo 02"
+        >
       </li>
 
-      <li class="splide__slide"
-        style="background-image: url('{{ url_for('static', filename='logos/logo01.png') }}')">
+      <li class="splide__slide">
+        <img
+          src="{{ url_for('static', filename='logos/logo01.png') }}"
+          alt="Partner logo 01"
+        >
       </li>
 
-      <li class="splide__slide"
-        style="background-image: url('{{ url_for('static', filename='logos/logo03.png') }}')">
+      <li class="splide__slide">
+        <img
+          src="{{ url_for('static', filename='logos/logo03.png') }}"
+          alt="Partner logo 03"
+        >
       </li>
 
-      <li class="splide__slide"
-        style="background-image: url('{{ url_for('static', filename='logos/logo04.png') }}')">
+      <li class="splide__slide">
+        <img
+          src="{{ url_for('static', filename='logos/logo04.png') }}"
+          alt="Partner logo 04"
+        >
       </li>
 
-      <li class="splide__slide"
-        style="background-image: url('{{ url_for('static', filename='logos/logo05.png') }}')">
+      <li class="splide__slide">
+        <img
+          src="{{ url_for('static', filename='logos/logo05.png') }}"
+          alt="Partner logo 05"
+        >
       </li>
 
-      <li class="splide__slide"
-        style="background-image: url('{{ url_for('static', filename='logos/logo06.png') }}')">
+      <li class="splide__slide">
+        <img
+          src="{{ url_for('static', filename='logos/logo06.png') }}"
+          alt="Partner logo 06"
+        >
       </li>
 
-      <li class="splide__slide"
-        style="background-image: url('{{ url_for('static', filename='logos/logo07.png') }}')">
+      <li class="splide__slide">
+        <img
+          src="{{ url_for('static', filename='logos/logo07.png') }}"
+          alt="Partner logo 07"
+        >
       </li>
 
-      <li class="splide__slide"
-        style="background-image: url('{{ url_for('static', filename='logos/logo08.png') }}')">
+      <li class="splide__slide">
+        <img
+          src="{{ url_for('static', filename='logos/logo08.png') }}"
+          alt="Partner logo 08"
+        >
       </li>
 
-      <li class="splide__slide"
-        style="background-image: url('{{ url_for('static', filename='logos/logo09.jfif') }}')">
+      <li class="splide__slide">
+        <img
+          src="{{ url_for('static', filename='logos/logo09.jfif') }}"
+          alt="Partner logo 09"
+        >
       </li>
 
-      <li class="splide__slide"
-        style="background-image: url('{{ url_for('static', filename='logos/logo10.png') }}')">
+      <li class="splide__slide">
+        <img
+          src="{{ url_for('static', filename='logos/logo10.png') }}"
+          alt="Partner logo 10"
+        >
       </li>
 
-      <li class="splide__slide"
-        style="background-image: url('{{ url_for('static', filename='logos/logo11.png') }}')">
+      <li class="splide__slide">
+        <img
+          src="{{ url_for('static', filename='logos/logo11.png') }}"
+          alt="Partner logo 11"
+        >
       </li>
 
-      <li class="splide__slide"
-        style="background-image: url('{{ url_for('static', filename='logos/logo12.png') }}')">
+      <li class="splide__slide">
+        <img
+          src="{{ url_for('static', filename='logos/logo12.png') }}"
+          alt="Partner logo 12"
+        >
       </li>
 
     </ul>
@@ -166,13 +201,14 @@
 </div>
 </div>
 
+</section>
 
 <!-- ───────── CONTACT SECTION ───────── -->
 <div id="contact-section" class="container">
 
   <h2>Contact Us</h2>
 
-  <form action="mailto:milanhulac1@gmail.com"
+  <form action="mailto:info@theswapclub.nl"
         method="post"
         enctype="text/plain">
 
@@ -228,25 +264,20 @@
 
 <!-- ───────── SPLIDE JS ───────── -->
 <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
-
 <script>
-
   document.addEventListener('DOMContentLoaded', function () {
-
     new Splide('#image-slider', {
-
       type: 'loop',
       autoplay: true,
-      interval: 1500,
+      interval: 2500,
+      speed: 1400,
+      easingFunc: 'cubic-bezier(0.25, 1, 0.5, 1)',
       perPage: 5,
       gap: '10px',
       arrows: false,
       pagination: false,
-
     }).mount();
-
   });
-
 </script>
 
 {% endblock %}
