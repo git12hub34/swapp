@@ -3,7 +3,11 @@
 {% block title %} Terms& Conditions | The Swap Club{% endblock %}
 
 {% block extra_css %}
-<link rel="stylesheet" href="{{ url_for('static', filename='css/terms.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/legal.css') }}">
+{% endblock %}
+
+{% block extra_js %}
+<script src="{{ url_for('static', filename='js/base.js') }}"></script>
 {% endblock %}
 
 {% block content %}
@@ -15,7 +19,7 @@
 <main class="terms-main">
 
 <div class="legal-header">
-  <p class="legal-brand">The Swap Club</p>
+  <p class="legal-section">The Swap Club</p>
   <h1 class="legal-title">Terms &amp; Conditions</h1>
   <p class="legal-updated">Last updated: 24.05.2026</p>
 </div>
@@ -25,13 +29,13 @@
     <h2>Article 1 – Definitions</h2>
     <p>In these Terms &amp; Conditions, the following definitions apply:</p>
     <ol>
-      <li><strong>The Swap Club / We / Us:</strong> The organisation operating clothing, toy, book and general goods swap events.</li>
-      <li><strong>Participant / You:</strong> Any individual attending an Event, bringing items, receiving points, or using The Swap Club’s services.</li>
-      <li><strong>Items:</strong> Clothing, accessories, books, toys, and other goods voluntarily brought by Participants for swapping.</li>
-      <li><strong>Points:</strong> Non-monetary digital credits assigned by The Swap Club based on item type and quality.</li>
-      <li><strong>Event:</strong> Any swap event, workshop, or activity organised by The Swap Club, whether ticketed or non-ticketed.</li>
-      <li><strong>Wallet Pass:</strong> The digital pass used to store, issue, and redeem points. Registration requires providing your first name, surname, and email address.</li>
-      <li><strong>Upcycling/Recycling:</strong> Repurposing, reworking, or responsibly disposing of items not suitable for circulation.</li>
+      <li>The Swap Club / We / Us: The organisation operating clothing, toy, book and general goods swap events.</li>
+      <li>Participant / You: Any individual attending an Event, bringing items, receiving points, or using The Swap Club’s services.</li>
+      <li>Items: Clothing, accessories, books, toys, and other goods voluntarily brought by Participants for swapping.</li>
+      <li>Points: Non-monetary digital credits assigned by The Swap Club based on item type and quality.</li>
+      <li>Event: Any swap event, workshop, or activity organised by The Swap Club, whether ticketed or non-ticketed.</li>
+      <li>Wallet Pass: The digital pass used to store, issue, and redeem points. Registration requires providing your first name, surname, and email address.</li>
+      <li>Upcycling/Recycling: Repurposing, reworking, or responsibly disposing of items not suitable for circulation.</li>
     </ol>
   </section>
 

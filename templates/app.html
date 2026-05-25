@@ -4,6 +4,10 @@
   <link rel="stylesheet" href="{{ url_for('static', filename='css/app.css') }}">
 {% endblock %}
 
+{% block extra_js %}
+<script src="{{ url_for('static', filename='js/base.js') }}"></script>
+{% endblock %}
+
 {% block content %}
 <div class="app-page">
 <section class="app-hero">

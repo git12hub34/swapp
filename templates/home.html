@@ -6,6 +6,10 @@
 <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
 {% endblock %}
 
+{% block extra_js %}
+<script src="{{ url_for('static', filename='js/base.js') }}"></script>
+{% endblock %}
+
 {% block content %}
 
 <!-- ─── HERO SECTION ─── -->
@@ -251,57 +255,4 @@
   </div>
 </section>
 
-{% endblock %}
-
-{% block extra_js %}
-<script>
-  // ─── SCROLL-SNAP STEPS ───
-  const stepsScroll = document.getElementById('stepsScroll');
-  const stepNavBtns = document.querySelectorAll('.step-nav-btn');
-  const stepsFill = document.getElementById('stepsFill');
-  const totalSteps = 4;
-
-  function updateActiveStep(index) {
-    stepNavBtns.forEach((btn, i) => {
-      btn.classList.toggle('active', i === index);
-    });
-    const pct = ((index) / (totalSteps - 1)) * 100;
-    stepsFill.style.height = pct + '%';
-  }
-
-  // Scroll-snap scroll listener
-  stepsScroll.addEventListener('scroll', () => {
-    const slideH = stepsScroll.clientHeight;
-    const scrollTop = stepsScroll.scrollTop;
-    const index = Math.round(scrollTop / slideH);
-    updateActiveStep(Math.min(index, totalSteps - 1));
-  });
-
-  // Nav button click: scroll to step
-  stepNavBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      const i = parseInt(btn.dataset.step);
-      stepsScroll.scrollTo({ top: i * stepsScroll.clientHeight, behavior: 'smooth' });
-    });
-  });
-
-  // ─── FAQ ACCORDION ───
-  document.querySelectorAll('.faq-question').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const item = btn.parentElement;
-      const isOpen = item.classList.contains('open');
-      // Close all
-      document.querySelectorAll('.faq-item').forEach(el => {
-        el.classList.remove('open');
-        el.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
-        el.querySelector('.faq-icon').textContent = '+';
-      });
-      if (!isOpen) {
-        item.classList.add('open');
-        btn.setAttribute('aria-expanded', 'true');
-        btn.querySelector('.faq-icon').textContent = '×';
-      }
-    });
-  });
-</script>
 {% endblock %}

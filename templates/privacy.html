@@ -3,7 +3,11 @@
 {% block title %}Privacy Policy | The Swap Club{% endblock %}
 
 {% block extra_css %}
-<link rel="stylesheet" href="{{ url_for('static', filename='css/privacy.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/legal.css') }}">
+{% endblock %}
+
+{% block extra_js %}
+<script src="{{ url_for('static', filename='js/base.js') }}"></script>
 {% endblock %}
 
 {% block content %}
@@ -36,9 +40,9 @@
     <p>We collect:</p>
 
     <ul>
-      <li><strong>Email address</strong> – required to download the Wallet Pass and link it to your account</li>
-      <li><strong>First name &amp; surname</strong> – used to identify your account</li>
-      <li><strong>Birthday</strong> – so we can grant birthday points</li>
+      <li>Email address – required to download the Wallet Pass and link it to your account</li>
+      <li>First name &amp; surname – used to identify your account</li>
+      <li>Birthday – so we can grant birthday points</li>
     </ul>
 
     <p>
@@ -136,8 +140,8 @@
     <p>We operate two groups:</p>
 
     <ul>
-      <li><strong>Announcements Group</strong> – Used only for event news and official updates</li>
-      <li><strong>Open Chat Group</strong> – Participants can discuss sustainable fashion, swapping, or community topics</li>
+      <li>Announcements Group – Used only for event news and official updates</li>
+      <li>Open Chat Group – Participants can discuss sustainable fashion, swapping, or community topics</li>
     </ul>
 
     <p>
@@ -363,7 +367,7 @@
 
     <p>
       To exercise your rights, contact us at:
-      <strong>info@theswapclub.nl</strong>
+      info@theswapclub.nl
     </p>
   </section>
 

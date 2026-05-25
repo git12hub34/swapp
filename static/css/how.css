@@ -1,17 +1,4 @@
 
-.reveal {
-  opacity: 0;
-  transform: translateY(60px);
-  transition: opacity 0.8s ease, transform 0.8s ease;
-}
-
-
-.reveal.is-visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-
 /* =========================================================
    1. PAGE BASE
    ========================================================= */
@@ -404,7 +391,6 @@
   color: var(--teal);
   text-transform: uppercase;
   line-height: 1;
-
   margin: 0 auto 8px;
   text-align: center;
 }
