@@ -242,5 +242,4 @@ footer {
   .nav-toggle { display: flex; }
   .nav-left, .nav-right { display: none; }
   .nav-left.open, .nav-right.open { display: flex; }
-  footer { padding: 48px 24px 24px; }
-}
+  footer { padding: 48px
