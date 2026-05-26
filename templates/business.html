@@ -137,31 +137,39 @@
     <ul class="splide__list">
 
       <li class="splide__slide">
+        <a> href="https://eu.patagonia.com/nl/en/home/" "target="_blank">
         <img
           src="{{ url_for('static', filename='logos/logo.02.jpg') }}"
           alt="Partner logo 02"
         >
+        </a>
       </li>
 
       <li class="splide__slide">
+         <a> href="https://livezoku.com/amsterdam/?gad_source=1&gad_campaignid=20835907877" "target="_blank">
         <img
           src="{{ url_for('static', filename='logos/logo01.png') }}"
           alt="Partner logo 01"
         >
+         </a>
       </li>
 
       <li class="splide__slide">
+         <a> href="https://mudjeans.com/nl/pages/mud-jeans-amsterdam-brand-store?srsltid=AfmBOopBdhMjXO_My51dl-2_hIyxiJMbm0zt8p4pKSu0Nul7WL3EJnud" "target="_blank">
         <img
           src="{{ url_for('static', filename='logos/logo03.png') }}"
           alt="Partner logo 03"
         >
+         </a>
       </li>
 
       <li class="splide__slide">
+          <a> href="https://cosh.eco/nl" "target="_blank">
         <img
           src="{{ url_for('static', filename='logos/logo04.png') }}"
           alt="Partner logo 04"
         >
+          </a>
       </li>
 
       <li class="splide__slide">
@@ -194,7 +202,7 @@
 
       <li class="splide__slide">
         <img
-          src="{{ url_for('static', filename='logos/logo09.jfif') }}"
+          src="{{ url_for('static', filename='logos/logo09.jpg') }}"
           alt="Partner logo 09"
         >
       </li>
@@ -290,20 +298,21 @@
 
 <!-- ───────── SPLIDE JS ───────── -->
 <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+<script src="
+https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-auto-scroll@0.5.3/dist/js/splide-extension-auto-scroll.min.js
+"></script>
 <script>
   document.addEventListener('DOMContentLoaded', function () {
     new Splide('#image-slider', {
       type: 'loop',
-      autoplay: true,
-      interval: 2500,
-      speed: 1400,
-      easingFunc: 'cubic-bezier(0.25, 1, 0.5, 1)',
       perPage: 5,
       gap: '10px',
       arrows: false,
       pagination: false,
-    }).mount();
+      autoScroll: {
+        speed: 1,
+      },
+    }).mount(window.splide.Extensions);
   });
 </script>
-
 {% endblock %}
