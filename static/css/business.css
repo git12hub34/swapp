@@ -519,8 +519,9 @@ nav a.nav-link.active { border-bottom: 2px solid var(--teal); }
 
 /* Slider */
 
-#image-slider {
+#image-slider-business {
 
+  width: 100%;
 }
 
 
@@ -539,6 +540,7 @@ nav a.nav-link.active { border-bottom: 2px solid var(--teal); }
 
 
 .splide__slide img {
+  max-width: 78%;
   max-height: 88px;
   object-fit: contain;
   display: block;
@@ -641,12 +643,12 @@ form input[type="submit"]:hover {
 #image-slider {
   width: 100%;
   margin: 0 0 28px;
-  overflow: visible;
+  overflow: hidden;
   background: transparent;
 }
 
 #image-slider .splide__track {
-  overflow: visible;
+  overflow: hidden;
 }
 
 .splide__list {
@@ -654,7 +656,7 @@ form input[type="submit"]:hover {
   align-items: center;
   list-style: none;
   margin: 0;
-  padding: 0 20px;
+  padding: 0;
 }
 
 .splide__slide {
@@ -662,21 +664,14 @@ form input[type="submit"]:hover {
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  height: 140px;
+  height: 120px;
   padding: 16px;
-  background-color: transparent;
 }
 
 .splide__slide img {
   max-width: 100%;
   max-height: 88px;
   object-fit: contain;
-  transition: transform 0.3s ease, opacity 0.3s ease;
-}
-
-.splide__slide:hover img {
-  transform: scale(1.05);
-  opacity: 0.9;
 }
 
 .splide__slide a {
@@ -700,16 +695,12 @@ form input[type="submit"]:hover {
 
 @media (max-width: 600px) {
   .splide__slide {
-    height: 100px;
+    height: 96px;
     padding: 12px;
   }
 
   .splide__slide img {
-    max-height: 64px;
-  }
-
-  .splide__list {
-    padding: 0 12px;
+    max-height: 72px;
   }
 }
 
