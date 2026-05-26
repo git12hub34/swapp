@@ -161,9 +161,7 @@ p {
 
   font-size: clamp(2.5rem, 6vw, 5rem);
 
-  line-height: 0.9;
-
-  letter-spacing: 0.02em;
+  line-height: 1;
 
   text-transform: uppercase;
 
