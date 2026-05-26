@@ -696,36 +696,26 @@ form input[type="submit"]:hover {
 
 
 
-
-
 .points-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 18px;
+  max-width: 1100px;
+  margin: 100px auto 0;
+  padding: 0 24px;
+
 }
 
 .point-card {
-  background: var(--warm-white);
+  background: var(--cream);
   border-radius: 14px;
   padding: 32px 28px;
-  border: 1.5px solid transparent;
   min-height: 280px;
-
   display: flex;
   flex-direction: column;
-
-  transition: transform 0.2s, border-color 0.2s;
 }
 
-.point-card:hover {
-  transform: translateY(-4px);
-  border-color: var(--teal);
-}
 
-.point-card-featured {
-  border-color: var(--teal);
-  background: var(--warm-white);
-}
 
 .point-token {
   width: 74px;
@@ -738,31 +728,13 @@ form input[type="submit"]:hover {
   align-items: center;
   justify-content: center;
 
-  font-family: var(--font-display);
-  font-size: 2.4rem;
-  line-height: 1;
-
   margin-bottom: 22px;
-}
-
-.point-token-small {
-  width: 68px;
-  height: 68px;
-  font-size: 2rem;
   flex-shrink: 0;
-
-  margin-bottom: 0;
 }
 
-.point-kicker {
-  font-family: var(--font-mono);
-  font-size: 10px;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--teal-mid);
-
-  margin-bottom: 10px;
+.point-token i {
+  font-size: 28px;
+  line-height: 1;
 }
 
 .point-title {
@@ -771,7 +743,6 @@ form input[type="submit"]:hover {
   color: var(--teal);
   text-transform: uppercase;
   line-height: 1;
-
   margin-bottom: 16px;
 }
 
@@ -779,4 +750,49 @@ form input[type="submit"]:hover {
   font-size: 14px;
   line-height: 1.65;
   color: var(--text-mid);
+}
+
+
+/* ───────── RESPONSIVE ───────── */
+
+@media (max-width: 1000px) {
+  .points-grid {
+    grid-template-columns: 1fr;
+    max-width: 620px;
+    margin: 70px auto 0;
+  }
+
+  .point-card {
+    min-height: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .points-grid {
+    gap: 16px;
+    margin-top: 48px;
+  }
+
+  .point-card {
+    padding: 28px 24px;
+    border-radius: 12px;
+  }
+
+  .point-token {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 20px;
+  }
+
+  .point-token i {
+    font-size: 24px;
+  }
+
+  .point-title {
+    font-size: 1.7rem;
+  }
+
+  .point-desc {
+    font-size: 14px;
+  }
 }
