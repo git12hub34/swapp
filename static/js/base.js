@@ -1,16 +1,27 @@
 
-// Image slider (used in about.html)
+// Image slider (used in business.html)
 
 document.addEventListener('DOMContentLoaded', function () {
-  new Splide('#image-slider', {
+  const splide = new Splide('#image-slider', {
     type: 'loop',
-    autoplay: true,
-    interval: 4000,
-    pauseOnHover: false,
+    perPage: 4,
+    gap: 20,
     arrows: false,
     pagination: false,
-    speed: 1200,
-  }).mount();
+    drag: false,
+    breakpoints: {
+      1200: { perPage: 3, gap: 16 },
+      768: { perPage: 2, gap: 12 },
+      480: { perPage: 1, gap: 8 }
+    }
+  });
+
+  splide.mount();
+
+  // Continuously auto-scroll one image at a time
+  setInterval(() => {
+    splide.go('+1');
+  }, 2500);
 });
 
 
