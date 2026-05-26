@@ -1,5 +1,5 @@
 
-
+/* ─────────  HERO SECTION ───────── */
 *,
 *::before,
 *::after {
@@ -128,57 +128,36 @@ p {
   background:var(--warm-white);
 }
 
-
-
-/* ───────── SLIDER TEXT ───────── */
-
 #slider-text {
   width: 50%;
   position: relative;
-
   display: flex;
   flex-direction: column;
   justify-content: center;
-
   padding: 6vw;
-
   background: var(--warm-white);;
-
   z-index: 2;
 }
 
 #slider-text h1 {
   font-family: var(--font-display);
-
   font-size: clamp(2.5rem, 6vw, 5rem);
-
   line-height: 1;
-
   text-transform: uppercase;
-
   color: var(--teal);
-
   margin-bottom: 24px;
-
   text-align: center;
-
 }
 
 #slider-text p {
   font-family: var(--font-body);
-
   font-size: clamp(1rem, 1.5vw, 1.2rem);
-
   line-height: 1.7;
-
   color: var(--text-dark);
-
   max-width: 700px;
-
   margin: 0 auto;
 }
 
-/* ───────── SPLIDE SLIDER ───────── */
 
 .splide__slide {
   height: 100%;
@@ -191,7 +170,6 @@ p {
   display: block;
 }
 
-/* ───────── MOBILE CHANGE ───────── */
 @media (max-width: 900px) {
 
   .hero-split {
@@ -212,8 +190,6 @@ p {
     padding: 60px 8%;
   }
 }
-
-/* ───────── RESPONSIVE ───────── */
 
 @media (max-width: 900px) {
 
@@ -258,7 +234,6 @@ p {
   }
 }
 
-/* Stats bar */
 .stats-bar {
   width: 100%;
   background: var(--teal);
@@ -473,17 +448,11 @@ p {
   margin: 0 0 64px;
 }
 
-
-/* ARTICLE GRID */
-
 .article-list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 34px;
 }
-
-
-/* ARTICLE CARD */
 
 .article-card {
   display: flex;
@@ -502,9 +471,6 @@ p {
   box-shadow: 0 18px 44px rgba(26, 74, 74, 0.18);
 }
 
-
-/* ARTICLE IMAGE */
-
 .article-image-wrap {
   width: 100%;
   aspect-ratio: 16 / 9;
@@ -517,10 +483,6 @@ p {
   height: 100%;
   object-fit: cover;
 }
-
-
-
-/* ARTICLE CONTENT */
 
 .article-content {
   background: #ffffff;
@@ -556,9 +518,6 @@ p {
   color: var(--text-mid);
   margin: 0;
 }
-
-
-/* MOBILE */
 
 @media (max-width: 900px) {
   .article-list {
