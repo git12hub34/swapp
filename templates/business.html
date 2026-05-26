@@ -286,13 +286,6 @@
         480: { perPage: 1, gap: 8 }
       }
     });
-
-    splide.mount();
-
-    // Continuously auto-scroll one image at a time
-    setInterval(() => {
-      splide.go('+1');
-    }, 2500);
-  });
+    autoscroll: 5
 </script>
 {% endblock %}
