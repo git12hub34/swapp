@@ -1,0 +1,287 @@
+{% extends "base.html" %}
+{% block title %}App | The Swap Club{% endblock %}
+{% block extra_css %}
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/app.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="app-page">
+<section class="app-hero">
+      <div class="app-hero-text">
+        <p class="page-label">Swap Club App</p>
+        <h1>Your swaps, points and events in one place.</h1>
+        <p>
+          The app helps members follow their points, join events,
+          save reminders and keep swapping simple.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#join-app" class="button button-primary">Join the app</a>
+          <a href="#app-features" class="button button-secondary">See how it works</a>
+        </div>
+      </div>
+
+      <div class="app-preview">
+        <div class="phone-mockup">
+          <div class="phone-screen">
+            <div class="phone-header">
+              <p>SwapClub</p>
+              <p>Wallet</p>
+            </div>
+
+            <section class="phone-card">
+              <h2>Your wallet</h2>
+              <p>Available points</p>
+              <p class="points-preview">42</p>
+            </section>
+
+            <section class="phone-card">
+              <h2>Next event</h2>
+              <p>Amsterdam Spring Swap</p>
+              <p>18 May · 13:00</p>
+            </section>
+
+            <section class="phone-card">
+              <h2>Recently swapped</h2>
+              <ul>
+                <li>Denim jacket · 8 points</li>
+                <li>Silk scarf · 4 points</li>
+              </ul>
+            </section>
+
+            <section class="phone-card">
+              <h2>Reminder</h2>
+              <p>Bring clean items and arrive during check-in.</p>
+            </section>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="app-features-section" id="app-features">
+      <div class="section-heading">
+        <p class="section-label">Features</p>
+        <h2>What the app helps with</h2>
+        <p>
+          Six built-in features make every swap easier — from tracking your points
+          to checking in and staying connected with new events.
+        </p>
+      </div>
+
+      <div class="feature-grid">
+
+        <article class="feature-card">
+          <div class="feature-icon icon-wallet" aria-hidden="true">
+            <svg viewBox="0 0 48 48" role="img">
+              <path d="M10 15h25a5 5 0 0 1 5 5v17H10a5 5 0 0 1-5-5V20a5 5 0 0 1 5-5Z" />
+              <path d="M10 15l22-6a4 4 0 0 1 5 3v3" />
+              <path d="M31 25h9v8h-9a4 4 0 0 1 0-8Z" />
+              <circle cx="33" cy="29" r="1.6" />
+            </svg>
+          </div>
+          <h3>Points wallet</h3>
+          <p>
+            Keep track of points from items you bring and use them again
+            at future events.
+          </p>
+        </article>
+
+        <article class="feature-card">
+          <div class="feature-icon icon-calendar" aria-hidden="true">
+            <svg viewBox="0 0 48 48" role="img">
+              <rect x="8" y="11" width="32" height="29" rx="5" />
+              <path d="M8 20h32" />
+              <path d="M17 7v8M31 7v8" />
+              <path d="m18 31 4 4 8-9" />
+            </svg>
+          </div>
+          <h3>Event calendar</h3>
+          <p>
+            See upcoming events, locations and times in one place before you decide to join.
+          </p>
+        </article>
+
+        <article class="feature-card">
+          <div class="feature-icon icon-checkin" aria-hidden="true">
+            <svg viewBox="0 0 48 48" role="img">
+              <path d="M24 42s14-12.5 14-24A14 14 0 0 0 10 18c0 11.5 14 24 14 24Z" />
+              <path d="m18 20 4 4 8-9" />
+            </svg>
+          </div>
+          <h3>Easy check-in</h3>
+          <p>
+            Use the app to make arrival, check-in and point collection smoother.
+          </p>
+        </article>
+
+        <article class="feature-card">
+          <div class="feature-icon icon-reminder" aria-hidden="true">
+            <svg viewBox="0 0 48 48" role="img">
+              <path d="M16 34h16" />
+              <path d="M18 34V22a6 6 0 0 1 12 0v12" />
+              <path d="M14 34c2-2 3-5 3-9" />
+              <path d="M34 34c-2-2-3-5-3-9" />
+              <path d="M21 38a3 3 0 0 0 6 0" />
+              <path d="M20 11c1.2-1.5 2.5-2.2 4-2.2s2.8.7 4 2.2" />
+            </svg>
+          </div>
+          <h3>Reminders</h3>
+          <p>
+            Get event reminders and know what to bring before you arrive.
+          </p>
+        </article>
+
+        <article class="feature-card">
+          <div class="feature-icon icon-community" aria-hidden="true">
+            <svg viewBox="0 0 48 48" role="img">
+              <circle cx="20" cy="18" r="6" />
+              <circle cx="32" cy="20" r="5" />
+              <path d="M8 38c1.8-7 6-11 12-11s10.2 4 12 11" />
+              <path d="M28 29c5.5.5 9.2 3.7 11 9" />
+            </svg>
+          </div>
+          <h3>Community</h3>
+          <p>
+            Stay connected with the Swap Club community and keep up with new events.
+          </p>
+        </article>
+
+        <article class="feature-card">
+          <div class="feature-icon icon-swap" aria-hidden="true">
+            <svg viewBox="0 0 48 48" role="img">
+              <path d="M14 18h19" />
+              <path d="m28 13 5 5-5 5" />
+              <path d="M34 30H15" />
+              <path d="m20 25-5 5 5 5" />
+              <path d="M17 12c3-3 10-4 15-1" />
+              <path d="M31 36c-3 3-10 4-15 1" />
+            </svg>
+          </div>
+          <h3>Keep swapping</h3>
+          <p>
+            The app makes it easier to return, reuse your remaining points and build a new habit.
+          </p>
+        </article>
+
+      </div>
+    </section>
+
+    <section class="app-flow-section">
+      <div class="section-heading">
+        <p class="section-label">Process</p>
+        <h2>How it works</h2>
+        <p>
+          From signing up to swapping again, each step is designed to be quick,
+          clear and easy to follow — even for first-time users.
+        </p>
+      </div>
+
+      <div class="app-flow-grid">
+
+        <article class="flow-step">
+          <div class="flow-number">1</div>
+          <h3>Join</h3>
+          <p>Create an account or leave your email to get notified when the app is ready.</p>
+        </article>
+
+        <article class="flow-step">
+          <div class="flow-number">2</div>
+          <h3>Book</h3>
+          <p>Choose your next event and see the time, location, price and practical details.</p>
+        </article>
+
+        <article class="flow-step">
+          <div class="flow-number">3</div>
+          <h3>Check in</h3>
+          <p>Bring your items, check in and receive points based on the event rules.</p>
+        </article>
+
+        <article class="flow-step">
+          <div class="flow-number">4</div>
+          <h3>Swap again</h3>
+          <p>Use your points at the same event or save them for another Swap Club event.</p>
+        </article>
+
+      </div>
+    </section>
+
+    <section class="membership-section" id="membership">
+      <div class="membership-text">
+        <p class="section-label">Membership</p>
+        <h2>Membership lives in the app.</h2>
+        <p>
+          One membership connects your events, points and swap history in one place.
+          Join the app, attend events, collect points and return more easily every time.
+        </p>
+      </div>
+
+      <article class="membership-card">
+        <h3>Why join?</h3>
+
+        <ul>
+          <li>Pay less over time compared with single tickets.</li>
+          <li>Save and reuse your remaining points.</li>
+          <li>Get event reminders and updates.</li>
+          <li>Follow your own swapping history.</li>
+        </ul>
+
+        <p class="price-placeholder">
+          Membership: €X per month / Single ticket: €X per event
+        </p>
+
+        <a href="#join-app" class="button button-primary">Join membership</a>
+      </article>
+    </section>
+
+    <section class="comparison-section">
+      <div class="section-heading">
+        <p class="section-label">Compare</p>
+        <h2>Single ticket or membership?</h2>
+        <p>
+          Membership is useful for people who want to return regularly,
+          while a single ticket is a simple first step.
+        </p>
+      </div>
+
+      <div class="comparison-grid">
+
+        <article class="comparison-card">
+          <h3>Single ticket</h3>
+          <ul>
+            <li>Good for trying one event.</li>
+            <li>Pay per event.</li>
+            <li>Useful for first-time visitors.</li>
+            <li>Less connection with long-term swapping history.</li>
+          </ul>
+        </article>
+
+        <article class="comparison-card comparison-highlight">
+          <h3>Membership</h3>
+          <ul>
+            <li>Better for regular swappers.</li>
+            <li>Financially better over time.</li>
+            <li>Keep points and event reminders in one place.</li>
+            <li>Supports long-term community participation.</li>
+          </ul>
+        </article>
+
+      </div>
+    </section>
+
+    <section class="join-app-section" id="join-app">
+      <div class="join-app-text">
+        <h2>Get notified when the app is ready</h2>
+        <p>
+          Not ready to download yet? Leave your email and we will let you know
+          as soon as the app launches.
+        </p>
+      </div>
+
+      <form class="join-app-form">
+        <label for="app-email">Email address</label>
+        <input type="email" id="app-email" name="app-email" placeholder="Your email address">
+        <button type="submit">Notify me</button>
+      </form>
+    </section>
+</div>
+{% endblock %}
