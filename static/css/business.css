@@ -690,3 +690,93 @@ form input[type="submit"]:hover {
     max-height: 72px;
   }
 }
+
+
+
+
+
+
+
+
+.points-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.point-card {
+  background: var(--warm-white);
+  border-radius: 14px;
+  padding: 32px 28px;
+  border: 1.5px solid transparent;
+  min-height: 280px;
+
+  display: flex;
+  flex-direction: column;
+
+  transition: transform 0.2s, border-color 0.2s;
+}
+
+.point-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--teal);
+}
+
+.point-card-featured {
+  border-color: var(--teal);
+  background: var(--warm-white);
+}
+
+.point-token {
+  width: 74px;
+  height: 74px;
+  border-radius: 50%;
+  background: var(--lime);
+  color: var(--teal);
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  font-family: var(--font-display);
+  font-size: 2.4rem;
+  line-height: 1;
+
+  margin-bottom: 22px;
+}
+
+.point-token-small {
+  width: 68px;
+  height: 68px;
+  font-size: 2rem;
+  flex-shrink: 0;
+
+  margin-bottom: 0;
+}
+
+.point-kicker {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--teal-mid);
+
+  margin-bottom: 10px;
+}
+
+.point-title {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  color: var(--teal);
+  text-transform: uppercase;
+  line-height: 1;
+
+  margin-bottom: 16px;
+}
+
+.point-desc {
+  font-size: 14px;
+  line-height: 1.65;
+  color: var(--text-mid);
+}
