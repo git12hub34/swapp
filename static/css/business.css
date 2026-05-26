@@ -521,7 +521,6 @@ nav a.nav-link.active { border-bottom: 2px solid var(--teal); }
 
 #image-slider {
 
-  width: 100%;
 }
 
 
@@ -540,7 +539,6 @@ nav a.nav-link.active { border-bottom: 2px solid var(--teal); }
 
 
 .splide__slide img {
-  max-width: 78%;
   max-height: 88px;
   object-fit: contain;
   display: block;
@@ -643,12 +641,12 @@ form input[type="submit"]:hover {
 #image-slider {
   width: 100%;
   margin: 0 0 28px;
-  overflow: hidden;
+  overflow: visible;
   background: transparent;
 }
 
 #image-slider .splide__track {
-  overflow: hidden;
+  overflow: visible;
 }
 
 .splide__list {
@@ -656,7 +654,7 @@ form input[type="submit"]:hover {
   align-items: center;
   list-style: none;
   margin: 0;
-  padding: 0;
+  padding: 0 20px;
 }
 
 .splide__slide {
@@ -664,14 +662,21 @@ form input[type="submit"]:hover {
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  height: 120px;
+  height: 140px;
   padding: 16px;
+  background-color: transparent;
 }
 
 .splide__slide img {
   max-width: 100%;
   max-height: 88px;
   object-fit: contain;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.splide__slide:hover img {
+  transform: scale(1.05);
+  opacity: 0.9;
 }
 
 .splide__slide a {
@@ -695,12 +700,16 @@ form input[type="submit"]:hover {
 
 @media (max-width: 600px) {
   .splide__slide {
-    height: 96px;
+    height: 100px;
     padding: 12px;
   }
 
   .splide__slide img {
-    max-height: 72px;
+    max-height: 64px;
+  }
+
+  .splide__list {
+    padding: 0 12px;
   }
 }
 
