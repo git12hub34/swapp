@@ -1,7 +1,5 @@
 
 
-/* ───────── RESET ───────── */
-
 *,
 *::before,
 *::after {
@@ -34,7 +32,6 @@ img {
   padding-top: var(--nav-h);
 }
 
-/* ───────── TYPOGRAPHY ───────── */
 
 h1 {
   font-family: var(--font-display);
@@ -64,15 +61,11 @@ p {
   max-width: 800px;
 }
 
-/* ───────── PAGE CONTAINER ───────── */
-
 .container {
   width: 100%;
   margin: 0 auto;
   padding: 0 0 80px;
 } 
-
-/* ───────── BUTTON ───────── */
 
 .nav-cta {
   display: inline-flex;
@@ -100,8 +93,6 @@ p {
   transform: translateY(-1px);
 }
 
-
-/* ───────── IMAGE SLIDER ───────── */
 
 
 #image-slider {
