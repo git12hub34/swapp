@@ -54,12 +54,19 @@ AOS.init();
     const pct = ((index) / (totalSteps - 1)) * 100;
     stepsFill.style.height = pct + '%';
   }
+ if (stepsScroll) {
+
   stepsScroll.addEventListener('scroll', () => {
+
     const slideH = stepsScroll.clientHeight;
     const scrollTop = stepsScroll.scrollTop;
     const index = Math.round(scrollTop / slideH);
+
     updateActiveStep(Math.min(index, totalSteps - 1));
+
   });
+
+}
 
   stepNavBtns.forEach(btn => {
     btn.addEventListener('click', () => {
