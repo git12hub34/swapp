@@ -1,10 +1,16 @@
 
+/* =========================================================
+   1. PAGE BASE
+   ========================================================= */
 
 .how-page {
   background: var(--warm-white);
   color: var(--text-dark);
 }
 
+/* =========================================================
+   HERO SECTION
+   ========================================================= */
 
 .events-hero {
   width: 100%;
@@ -177,6 +183,9 @@
 }
 
 
+/* =========================================================
+   3. HOW IT WORKS — SCROLL SNAP STEPS
+   ========================================================= */
 
 .steps-outer {
   display: grid;
@@ -353,9 +362,7 @@
 }
 
 
-/* =========================================================
-   4. WHAT ARE SWAP POINTS?
-   ========================================================= */
+/* ───────── WHAT ARE SWAP POINTS? ───────── */
 
 .about-section {
   background: var(--cream);
@@ -405,6 +412,10 @@
 }
 
 
+/* =========================================================
+   5. POINT SYSTEM
+   NOTE: .points-section is also used by the Examples section.
+   ========================================================= */
 
 .points-section {
   background: var(--cream);
@@ -416,6 +427,263 @@
   margin: 0 auto;
 }
 
+
+/* Section headings */
+
+.points-heading,
+.bonus-heading {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.points-heading h3,
+.bonus-title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 3.4rem);
+  color: var(--teal);
+  text-transform: uppercase;
+  line-height: 1;
+  margin: 0 auto 8px;
+  text-align: center;
+}
+
+.points-heading p,
+.bonus-subtitle {
+  font-family: var(--font-body);
+  font-size: 14px;
+  color: var(--text-mid);
+  text-align: center;
+
+  margin: 0;
+}
+
+.points-label {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--teal-mid);
+
+  margin-bottom: 12px;
+}
+
+
+/* Base point cards */
+
+.points-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.point-card {
+  background: var(--warm-white);
+  border-radius: 14px;
+  padding: 32px 28px;
+  border: 1.5px solid transparent;
+  min-height: 280px;
+
+  display: flex;
+  flex-direction: column;
+
+  transition: transform 0.2s, border-color 0.2s;
+}
+
+.point-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--teal);
+}
+
+.point-card-featured {
+  border-color: var(--teal);
+  background: var(--warm-white);
+}
+
+.point-token {
+  width: 74px;
+  height: 74px;
+  border-radius: 50%;
+  background: var(--lime);
+  color: var(--teal);
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  font-family: var(--font-display);
+  font-size: 2.4rem;
+  line-height: 1;
+
+  margin-bottom: 22px;
+}
+
+.point-token-small {
+  width: 68px;
+  height: 68px;
+  font-size: 2rem;
+  flex-shrink: 0;
+
+  margin-bottom: 0;
+}
+
+.point-kicker {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--teal-mid);
+
+  margin-bottom: 10px;
+}
+
+.point-title {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  color: var(--teal);
+  text-transform: uppercase;
+  line-height: 1;
+
+  margin-bottom: 16px;
+}
+
+.point-desc {
+  font-size: 14px;
+  line-height: 1.65;
+  color: var(--text-mid);
+}
+
+
+/* Bonus point cards */
+
+.bonus-wrap {
+  margin-top: 72px;
+}
+
+.bonus-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.bonus-card {
+  background: var(--warm-white);
+  border-radius: 14px;
+  padding: 24px;
+  border: 1.5px solid rgba(26, 74, 74, 0.12);
+
+  display: flex;
+  gap: 18px;
+  align-items: flex-start;
+}
+
+.bonus-token {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: var(--teal);
+  color: var(--cream);
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  line-height: 1;
+
+  flex-shrink: 0;
+}
+
+.bonus-card h4 {
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--teal);
+  line-height: 1.4;
+
+  margin-bottom: 8px;
+}
+
+.bonus-card p {
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--text-mid);
+}
+
+.bonus-card-dark {
+  background: var(--teal);
+  border-color: var(--teal);
+}
+
+.bonus-card-dark h4 {
+  color: var(--lime);
+}
+
+.bonus-card-dark p {
+  color: rgba(232, 232, 200, 0.78);
+}
+
+.bonus-card-dark .bonus-token {
+  background: var(--lime);
+  color: var(--teal);
+}
+
+
+/* Extra points and not accepted */
+
+.extra-points-card {
+  background: var(--lime);
+  border-radius: 14px;
+  padding: 28px;
+  margin-top: 56px;
+
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.extra-points-card .point-token {
+  background: var(--teal);
+  color: var(--cream);
+}
+
+.extra-points-card .point-kicker,
+.extra-points-card .point-title,
+.extra-points-card .point-desc {
+  color: var(--teal);
+}
+
+.not-accepted-card {
+  background: var(--warm-white);
+  border-radius: 14px;
+  padding: 32px 28px;
+  margin-top: 56px;
+  border-left: 6px solid var(--teal);
+}
+
+.not-accepted-card ul {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px 28px;
+
+  margin: 0;
+  padding-left: 18px;
+}
+
+.not-accepted-card li {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--text-mid);
+}
+
+
+/* =========================================================
+   6. EXAMPLES MARQUEE
+   ========================================================= */
 
 
 .examples-section {
@@ -618,9 +886,7 @@
   margin: 7px 0;
 }
 
-/* =========================================================
-   7. FAQS
-   ========================================================= */
+/* ─────────FAQS ───────── */
 
 .faq-section {
   background: var(--warm-white);
@@ -711,6 +977,137 @@
   transform: rotate(0deg);
 }
 
+
+/* =========================================================
+   8. RESPONSIVE
+   ========================================================= */
+
+/*
+@media (max-width: 900px) {
+  .points-grid,
+  .bonus-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .point-card {
+    min-height: auto;
+  }
+
+  .not-accepted-card ul {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 700px) {
+  .examples-marquee {
+    --card-width: 260px;
+    --card-gap: 16px;
+    --marquee-speed: 24s;
+  }
+
+  .example-card {
+    min-height: 410px;
+    padding: 22px;
+  }
+
+  .example-top {
+    grid-template-columns: 82px 1fr;
+    gap: 14px;
+  }
+
+  .example-number {
+    width: 64px;
+    height: 64px;
+    font-size: 2rem;
+  }
+
+  .example-label {
+    font-size: 1rem;
+    margin-top: 12px;
+  }
+
+  .example-card h3 {
+    margin-top: 20px;
+    font-size: 1.15rem;
+  }
+
+  .example-image-wrap {
+    height: 150px;
+  }
+
+  .example-breakdown {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .events-hero {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 40px;
+
+    padding: 90px 6%;
+  }
+
+  .events-hero-text h1 {
+    font-size: 3.5rem;
+  }
+
+  .steps-outer {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+
+  .steps-sidebar {
+    display: none;
+  }
+
+  .steps-scroll {
+    height: auto;
+    overflow: visible;
+    scroll-snap-type: none;
+  }
+
+  .step-slide {
+    height: auto;
+    scroll-snap-align: none;
+    padding: 60px 6%;
+  }
+
+  .step-content {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .step-image-wrap {
+    aspect-ratio: 4 / 3;
+  }
+
+  .step-number {
+    font-size: 5rem;
+  }
+
+  .points-section {
+    padding: 72px 6%;
+  }
+
+  .extra-points-card {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .point-card,
+  .bonus-card,
+  .extra-points-card,
+  .not-accepted-card {
+    border-radius: 12px;
+  }
+
+  .faq-section {
+    padding: 72px 6%;
+  }
+}
+*/
 
 
 @media (max-width: 600px) {
