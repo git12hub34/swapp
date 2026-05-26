@@ -8,23 +8,22 @@
   color: var(--text-dark);
 }
 
-
 /* =========================================================
-   2. HERO SECTION
+   HERO SECTION
    ========================================================= */
 
 .events-hero {
-  margin-top: 60px;
   width: 100%;
   min-height: 85vh;
-  background: var(--cream);
+  margin-top: 60px;
+  padding: 120px 8%;
 
   display: flex;
   align-items: center;
   justify-content: space-between;
-
   gap: 80px;
-  padding: 120px 8%;
+
+  background: var(--cream);
 }
 
 .events-hero-text {
@@ -33,76 +32,155 @@
 
 .page-label,
 .section-label {
+  margin-bottom: 16px;
+
   font-family: var(--font-body);
   font-weight: 700;
-  text-transform: uppercase;
   letter-spacing: 1px;
+  text-transform: uppercase;
+
   color: var(--dark-brown);
-  margin-bottom: 16px;
 }
 
 .events-hero-text h1 {
+  margin-bottom: 24px;
+
   font-family: var(--font-display);
   font-size: 6rem;
   line-height: 1;
-  color: var(--teal);
   text-transform: uppercase;
-  margin-bottom: 24px;
+
+  color: var(--teal);
 }
 
 .events-hero-text p {
-  font-family: var(--font-body);
-  font-size: 1rem;
-  color: var(--text-dark);
   max-width: 560px;
   margin-bottom: 30px;
+
+  font-family: var(--font-body);
+  font-size: 1rem;
+
+  color: var(--text-dark);
 }
 
 
-/* Hero step summary box */
-
 .events-hero-summary {
   flex: 1;
+  padding: 40px;
+
   background: var(--lime);
   border-radius: 20px;
-  padding: 40px;
 }
 
 .event-flow-list {
   list-style: none;
   counter-reset: event-step;
-  padding: 0;
   margin: 0;
+  padding: 0;
 }
 
 .event-flow-list li {
   counter-increment: event-step;
 
-  font-family: var(--font-body);
-  font-weight: 700;
-  color: var(--dark-brown);
+  margin-bottom: 14px;
+  padding: 18px;
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
 
   background: var(--cream);
   border-radius: 12px;
 
-  padding: 18px;
-  margin-bottom: 14px;
+  font-family: var(--font-body);
+  font-weight: 700;
+  color: var(--dark-brown);
+
+  transition: background 0.25s ease, transform 0.25s ease;
+}
+
+.event-flow-list li:last-child {
+  margin-bottom: 0;
 }
 
 .event-flow-list li::before {
   content: counter(event-step);
+
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+
   display: inline-flex;
   align-items: center;
   justify-content: center;
 
-  width: 32px;
-  height: 32px;
-
   border-radius: 50%;
   background: var(--teal);
   color: var(--cream);
+}
 
-  margin-right: 12px;
+.event-flow-list a {
+  width: 100%;
+
+  color: inherit;
+  text-decoration: none;
+
+  transition: color 0.25s ease;
+}
+
+
+
+.event-flow-list li:hover {
+  background: var(--warm-white);
+  transform: translateX(4px);
+}
+
+.event-flow-list li:hover a {
+  color: var(--teal);
+}
+
+@media (max-width: 900px) {
+  .events-hero {
+    flex-direction: column;
+    align-items: flex-start;
+
+    min-height: auto;
+    padding: 100px 6% 72px;
+    gap: 48px;
+  }
+
+  .events-hero-text h1 {
+    font-size: 4rem;
+  }
+
+  .events-hero-summary {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .events-hero {
+    padding: 90px 6% 64px;
+  }
+
+  .events-hero-text h1 {
+    font-size: 3.2rem;
+  }
+
+  .events-hero-summary {
+    padding: 24px;
+    border-radius: 16px;
+  }
+
+  .event-flow-list li {
+    padding: 15px;
+  }
+
+  .event-flow-list li::before {
+    width: 28px;
+    height: 28px;
+    font-size: 0.85rem;
+  }
 }
 
 
@@ -826,6 +904,9 @@
 .faq-section {
   background: var(--warm-white);
   padding: 100px 6%;
+}
+.faq-answer p {
+  white-space: pre-line;
 }
 
 .faq-inner {
