@@ -1,4 +1,17 @@
-
+document.addEventListener('DOMContentLoaded', function () {
+  const splide = new Splide('#image-slider', {
+    type: 'loop',
+    perPage: 1,
+    gap: 20,
+    arrows: false,
+    pagination: false,
+    drag: false,
+    breakpoints: {
+      1200: { perPage: 3, gap: 16 },
+      768: { perPage: 2, gap: 12 },
+      480: { perPage: 1, gap: 8 }
+    }
+  });
 
 
 
