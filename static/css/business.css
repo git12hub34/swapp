@@ -521,7 +521,6 @@ nav a.nav-link.active { border-bottom: 2px solid var(--teal); }
 
 #image-slider {
 
-  width: 100%;
 }
 
 
@@ -540,7 +539,6 @@ nav a.nav-link.active { border-bottom: 2px solid var(--teal); }
 
 
 .splide__slide img {
-  max-width: 78%;
   max-height: 88px;
   object-fit: contain;
   display: block;
