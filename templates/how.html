@@ -418,35 +418,78 @@
   <!-- =========================================================
        6. FAQS
        ========================================================= -->
-  <section class="faq-section" id="faqs">
-    <div class="faq-inner">
-      <h2 class="faq-title">FAQs</h2>
+<section class="faq-section" id="faqs">
+  <div class="faq-inner">
+    <h2 class="faq-title">FAQs</h2>
 
-      <div class="faq-list">
-        {% set faqs = [
-          ("What clothes can I bring?", "Bring clean, good-quality clothes, shoes, bags and accessories that someone else would be excited to wear."),
-          ("What clothes are not accepted?", "We don’t accept dirty items, damaged pieces, stained clothing, heavily worn shoes, underwear, untagged swimwear or ultra-fast fashion brands."),
-          ("Do my clothes need to be branded?", "No. Unbranded pieces are welcome as long as they are clean and in good condition. Branded, designer, vintage or natural-fabric pieces may receive extra points."),
-          ("How are my clothes given points?", "Items are given points based on their type, condition, brand and fabric. Basic pieces receive fewer points, while statement, designer or luxury items can receive more."),
-          ("Can I bring shoes and bags?", "Yes. Shoes, boots and bags are accepted when they are clean, wearable and in good condition."),
-          ("What happens to clothes that are not swapped?", "Any leftover pieces are kept for future swaps, donated or responsibly recycled so they avoid going to waste.")
-        ] %}
+    <div class="faq-list">
+      {% set faqs = [
+        (
+          "What items can I bring?",
+          "You can bring clean, good-quality clothes, shoes, bags, accessories, books, plants, toys and other small items that someone else would be excited to take home."
+        ),
 
-        {% for question, answer in faqs %}
-        <div class="faq-item">
-          <button class="faq-question" aria-expanded="false">
-            <span>{{ question }}</span>
-            <span class="faq-icon">+</span>
-          </button>
+        (
+          "How does the point system work?",
+          "Every item starts with a base point value depending on the item type.
 
-          <div class="faq-answer">
-            <p>{{ answer }}</p>
-          </div>
+Clothes:
+• 1 point: basic pieces such as T-shirts, basic tops, shorts, hats, belts and jewellery.
+• 2 points: everyday wardrobe pieces such as jeans, skirts, blouses, shirts, pants, cardigans, sweaters and jumpers.
+• 3 points: statement items such as dresses, blazers, jackets, jumpsuits, shoes, boots and bags.
+
+Books:
+• 1–2 points depending on condition and type.
+
+Plants:
+• 1–4 points depending on size, condition and type.
+
+Toys and other items:
+• 1–4 points depending on condition, quality and usefulness.
+
+Bonus points can be added for special pieces:
+• +3 points for mid-range or sustainable brands.
+• +8 points for designer pieces or rare vintage items.
+• +20 points for high-end luxury brands.
+• +2 points for items that are brand new with tags or made from natural fabrics such as silk, linen, wool or 100% cotton."
+        ),
+
+        (
+          "What items are not accepted?",
+          "We do not accept dirty, damaged, stained or heavily worn items. We also do not accept heavily worn shoes, underwear, untagged swimwear or ultra-fast fashion brands."
+        ),
+
+        (
+          "Do my items need to be branded?",
+          "No. Unbranded pieces are welcome as long as they are clean and in good condition. Branded, designer, vintage or natural-fabric pieces may receive extra points."
+        ),
+
+        (
+          "Can I bring shoes and bags?",
+          "Yes. Shoes, boots and bags are accepted when they are clean, wearable and in good condition."
+        ),
+
+        (
+          "What happens to items that are not swapped?",
+          "Any leftover pieces are kept for future swaps, donated or responsibly recycled so they avoid going to waste."
+        )
+      ] %}
+
+      {% for question, answer in faqs %}
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <span>{{ question }}</span>
+          <span class="faq-icon">+</span>
+        </button>
+
+        <div class="faq-answer">
+          <p>{{ answer }}</p>
         </div>
-        {% endfor %}
       </div>
+      {% endfor %}
     </div>
-  </section>
+  </div>
+</section>
 
 </main>
 

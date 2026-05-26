@@ -15,7 +15,7 @@
 .events-hero {
   width: 100%;
   min-height: 85vh;
-  margin-top: 60px;
+  margin-top: 0px;
   padding: 120px 8%;
 
   display: flex;
@@ -983,7 +983,7 @@
 }
 
 .faq-item.open .faq-answer {
-  max-height: 300px;
+  max-height: 1500px;
 }
 
 .faq-item.open .faq-icon {
