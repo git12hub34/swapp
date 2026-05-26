@@ -519,6 +519,9 @@ p {
   margin: 0;
 }
 
+
+/* MOBILE */
+
 @media (max-width: 900px) {
   .article-list {
     grid-template-columns: 1fr;
