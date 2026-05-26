@@ -44,7 +44,7 @@ body {
 
 
 
-/* The hero image */
+
 .hero-section {
   position: relative;
   height: 100vh;
@@ -54,13 +54,12 @@ body {
 
 
 .hero-image {
-  /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/Swap\ Club\ Image\ 02.jpeg');
 
-  /* Set a specific height */
+ 
   height: 100%;
 
-  /* Position and center the image to scale nicely on all screens */
+
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -106,7 +105,7 @@ body {
   justify-content: center;
 }
 
-/* Card container */
+
 .cards {
   margin-top: 80px;
   margin-bottom: 80px;
@@ -118,7 +117,7 @@ body {
   padding: 0 20px;
 }
 
-/* Individual card */
+
 .card {
   background: var(--cream);
   border-radius: 28px;
@@ -133,7 +132,7 @@ body {
   max-width: 360px;
 }
 
-/* Align cards vertically like “point boxes” */
+
 .card h3 {
   font-family: var(--font-display);
   color: var(--teal);
@@ -159,12 +158,12 @@ body {
 }
 
 
-/* Hover effect */
+
 .card:hover {
   transform: translateY(-6px);
 }
 
-/* Card title */
+
 .card h3 {
   font-size: 38px;
   line-height: 1.2;
@@ -172,14 +171,14 @@ body {
   margin-bottom: 24px;
 }
 
-/* Card text */
+
 .card p {
   font-size: 20px;
   line-height: 1.9;
   color: #333;
 }
 
-/* ───────── CARD ICONS ───────── */
+
 
 .card-icons {
 
@@ -193,7 +192,7 @@ body {
 }
 
 
-/* Individual Icon */
+
 
 .card-icons i {
 
@@ -219,7 +218,7 @@ body {
 }
 
 
-/* Hover Effect */
+
 
 .card-icons i:hover {
 
@@ -228,7 +227,7 @@ body {
   background-color: var(--soft-yellow);
 }
 
-/* Tablet responsive layout */
+
 @media (max-width: 1100px) {
 
   .cards {
@@ -240,7 +239,7 @@ body {
   }
 }
 
-/* Mobile responsive layout */
+
 @media (max-width: 700px) {
 
   .cards {
@@ -264,7 +263,6 @@ body {
   }
 }
 
-/* ───────── CONTACT SECTION ───────── */
 
 .contact-section {
   background-color: var(--cream);
@@ -280,8 +278,6 @@ body {
 }
 
 
-/* Heading */
-
 .contact-container h2 {
   font-family: var(--font-display);
   font-size: 56px;
@@ -291,7 +287,6 @@ body {
 }
 
 
-/* Form Layout */
 
 .contact-container form {
   display: flex;
@@ -300,8 +295,6 @@ body {
   margin-top: 20px;
 }
 
-
-/* Labels */
 
 .contact-container label {
 
@@ -315,7 +308,6 @@ body {
 }
 
 
-/* Inputs + Textarea */
 
 .contact-container input,
 .contact-container textarea {
@@ -342,7 +334,6 @@ body {
 }
 
 
-/* Textarea */
 .contact-container textarea {
 
   min-height: 180px;
@@ -351,7 +342,6 @@ body {
 }
 
 
-/* Submit Button */
 
 .contact-container input[type="submit"] {
 
@@ -373,7 +363,6 @@ body {
 }
 
 
-/* Hover Effect */
 
 .contact-container input[type="submit"]:hover {
 
@@ -381,7 +370,7 @@ body {
 
   transform: translateY(-2px);
 }
-/* ───────── OUR PARTNERS SECTION ───────── */
+
 
 .partners-section {
   background-color: var(--cream);
@@ -402,7 +391,7 @@ body {
   text-align: center;
 }
 
-/* Also apply heading styling for this page */
+
 .partners-section h2 {
   font-family: var(--font-display);
   font-size: clamp(2rem, 4vw, 3.4rem);
@@ -415,7 +404,6 @@ body {
 }
 
 
-/* Heading */
 
 .partners-section h2 {
 
@@ -430,11 +418,6 @@ body {
   margin-bottom: 50px;
 }
 
-
-/* Slider */
-
-
-/* Individual Logo Cards */
 
 .splide__slide {
   height: 140px;
@@ -457,8 +440,6 @@ body {
 
 
 
-/* Optional Hover Effect */
-
 .splide__slide:hover {
 
   transform: translateY(-4px);
@@ -467,7 +448,6 @@ body {
 }
 
 
-/* ─── RESPONSIVE ─── */
 @media (max-width: 900px) {
   .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
   nav { padding: 0 20px; }
@@ -616,8 +596,6 @@ form input[type="submit"]:hover {
 
 
 
-
-
 .points-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -665,8 +643,6 @@ form input[type="submit"]:hover {
   color: var(--text-mid);
 }
 
-
-/* ───────── RESPONSIVE ───────── */
 
 @media (max-width: 1000px) {
   .points-grid {
