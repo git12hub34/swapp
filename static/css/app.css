@@ -232,8 +232,6 @@
 }
 
 
-/* APP FLOW */
-
 .app-flow-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -254,8 +252,6 @@
     margin-bottom: 20px;
 }
 
-
-/* MEMBERSHIP */
 
 .membership-section {
     width: 100%;
@@ -314,9 +310,6 @@
     margin: 24px 0;
 }
 
-
-/* COMPARISON */
-
 .comparison-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -341,8 +334,7 @@
     background: var(--lime);
 }
 
-
-/* JOIN APP FORM */
+/* ─────────  JOIN APP SECTION ───────── */
 
 .join-app-section {
     width: 100%;
@@ -408,8 +400,6 @@
 }
 
 
-/* RESPONSIVE */
-
 @media (max-width: 900px) {
     .app-hero,
     .membership-section,
@@ -439,8 +429,6 @@
     }
 }
 
-/* RESPONSIVE FIX FOR LAPTOP / MACBOOK SCREENS
-   This keeps the hero section and phone preview visible on shorter screens. */
 
 .app-hero {
     min-height: calc(100vh - 70px);
@@ -504,7 +492,6 @@
     }
 }
 
-/* Shorter laptop windows */
 @media (max-height: 700px) and (min-width: 901px) {
     .app-hero {
         padding-top: 30px;

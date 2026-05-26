@@ -1,8 +1,5 @@
 
 
-/* =========================================================
-   FLOATING SWAP STORIES
-   ========================================================= */
 
 .floating-swap-section {
   background: var(--cream);
@@ -33,12 +30,6 @@
 }
 
 
-/* =========================================================
-   MOVING TRACK
-   ========================================================= */
-
-
-
 .floating-card-track-wrap {
   --card-width: 260px;
   --card-height: 340px;
@@ -63,15 +54,10 @@
   flex-shrink: 0;
 }
 
-/* Gap between the first set and the duplicate set */
 .floating-card-set + .floating-card-set {
   margin-left: var(--card-gap);
 }
 
-/* IMPORTANT:
-   The track moves by exactly one full set:
-   6 cards + 6 gaps.
-*/
 @keyframes floatingCardsMove {
   from {
     transform: translateX(0);
@@ -90,10 +76,7 @@
 }
 
 
-/* =========================================================
-   FLIP CARDS
-   ========================================================= */
-
+/* ─────────  FLIP CARDS ───────── */
 
 .floating-flip-card {
   width: var(--card-width);
@@ -102,7 +85,6 @@
   perspective: 1000px;
 }
 
-/* Different vertical positions for a floating collage feel */
 .floating-flip-card:nth-child(2n) {
   margin-top: 44px;
 }
@@ -145,11 +127,6 @@
   display: block;
 }
 
-
-/* =========================================================
-   CARD BACK
-   ========================================================= */
-
 .floating-card-back {
   background: var(--teal);
   color: var(--cream);
@@ -190,11 +167,6 @@
   color: var(--warm-white);
 }
 
-
-/* =========================================================
-   REDUCED MOTION ACCESSIBILITY
-   ========================================================= */
-
 @media (prefers-reduced-motion: reduce) {
   .floating-card-track {
     animation: none;
@@ -205,10 +177,6 @@
   }
 }
 
-
-/* =========================================================
-   RESPONSIVE
-   ========================================================= */
 
 @media (max-width: 700px) {
   .floating-card-track-wrap {
@@ -244,27 +212,11 @@
 }
 
 
-
-
-
-
-
-
-
-/* ========================================================= */
-/* 1. WHOLE PAGE WRAPPER                                    */
-/* ========================================================= */
-
 .community-page {
   background: var(--warm-white);
   color: var(--text-dark);
 }
 
-
-
-/* ========================================================= */
-/* 6.social links                               */
-/* ========================================================= */
 
 .social-section {
   background: var(--teal-mid);
@@ -294,9 +246,6 @@
   line-height: 1.7;
 }
 
-/* ========================================================= */
-/* join membershiip                                 */
-/* ========================================================= */
 
 .join-section {
   background: var(--warm-white);
@@ -373,10 +322,6 @@
 }
 
 
-/* ========================================================= */
-/* 4. SUBSCRIPTION FEES SECTION                             */
-/* ========================================================= */
-
 .subscription-section {
   padding: 90px 32px;
   background: var(--teal);
@@ -399,9 +344,6 @@
   color: var(--warm-white);
 }
 
-/*
-    Card container.
-*/
 .subscription-cards {
   max-width: 1050px;
   margin: 0 auto;
@@ -410,9 +352,7 @@
   gap: 24px;
 }
 
-/*
-    Individual card.
-*/
+
 .subscription-card {
   background: var(--cream);
   color: var(--text-dark);
@@ -446,11 +386,6 @@
 }
 
 
-
-
-/* ========================================================= */
-/* 6. RESPONSIVE DESIGN                                     */
-/* ========================================================= */
 
 @media (max-width: 900px) {
   .community-photo-grid {
@@ -500,11 +435,6 @@
   font-weight: 700;
   text-decoration: underline;
 }
-
-
-
-    
-
 
 .social-buttons {
   display: flex;
