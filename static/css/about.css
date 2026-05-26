@@ -191,13 +191,14 @@ p {
 /* ───────── SPLIDE SLIDER ───────── */
 
 .splide__slide {
-  height: 750px;
+  height: 100%;
 }
 
 .splide__slide img {
   width: 100%;
-  height: 750px;
+  height: 100%;
   object-fit: cover;
+  display: block;
 }
 
 /* ───────── MOBILE CHANGE ───────── */
@@ -246,7 +247,7 @@ p {
 
   .splide__slide,
   .splide__slide img {
-    height: 550px;
+    height: 100%;
   }
 
   #slider-text {

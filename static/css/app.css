@@ -815,3 +815,56 @@
         max-width: 320px;
     }
 }
+
+/* FIRST SCREEN HERO FIX
+   Keeps the first /app view fully within the yellow-green hero area.
+   The white Features section will only appear after scrolling down. */
+:root {
+    --app-navbar-height: 58px;
+}
+
+.app-hero {
+    min-height: calc(100vh - var(--app-navbar-height)) !important;
+    min-height: calc(100svh - var(--app-navbar-height)) !important;
+    box-sizing: border-box;
+    margin-top: 0 !important;
+    padding-top: clamp(28px, 5vh, 70px) !important;
+    padding-bottom: clamp(28px, 5vh, 70px) !important;
+    background: var(--cream) !important;
+    align-items: center;
+}
+
+.app-features-section {
+    margin-top: 0 !important;
+}
+
+@media (max-height: 800px) and (min-width: 901px) {
+    .app-hero {
+        min-height: calc(100vh - var(--app-navbar-height)) !important;
+        min-height: calc(100svh - var(--app-navbar-height)) !important;
+        padding-top: 24px !important;
+        padding-bottom: 24px !important;
+    }
+}
+
+@media (max-height: 700px) and (min-width: 901px) {
+    .app-hero {
+        min-height: calc(100vh - var(--app-navbar-height)) !important;
+        min-height: calc(100svh - var(--app-navbar-height)) !important;
+        padding-top: 18px !important;
+        padding-bottom: 18px !important;
+    }
+
+    .app-hero-text h1 {
+        font-size: clamp(3.2rem, 5vw, 4.6rem);
+    }
+}
+
+@media (max-width: 900px) {
+    .app-hero {
+        min-height: calc(100vh - var(--app-navbar-height)) !important;
+        min-height: calc(100svh - var(--app-navbar-height)) !important;
+        padding-top: 44px !important;
+        padding-bottom: 44px !important;
+    }
+}
