@@ -27,39 +27,15 @@
   --font-mono: 'Space Mono', monospace;
 }
 
-
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  font-family: var(--font-body);
-  background: var(--warm-white);
-  color: var(--text-dark);
-  overflow-x: hidden;
-  font-size: 16px;
-  line-height: 1.6;
-}
-
-
-
-
 .hero-section {
   position: relative;
   height: 100vh;
   min-height: 800px;
-
 }
-
 
 .hero-image {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/Swap\ Club\ Image\ 02.jpeg');
-
- 
   height: 100%;
-
-
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -78,7 +54,6 @@ body {
   text-align: left;
   max-width: 700px;
 }
-
 
 .hero-headline {
   font-family: var(--font-display);
@@ -105,7 +80,7 @@ body {
   justify-content: center;
 }
 
-
+/* Card container */
 .cards {
   margin-top: 80px;
   margin-bottom: 80px;
@@ -117,7 +92,7 @@ body {
   padding: 0 20px;
 }
 
-
+/* Individual card */
 .card {
   background: var(--cream);
   border-radius: 28px;
@@ -132,7 +107,7 @@ body {
   max-width: 360px;
 }
 
-
+/* Align cards vertically like “point boxes” */
 .card h3 {
   font-family: var(--font-display);
   color: var(--teal);
@@ -157,12 +132,9 @@ body {
   height: 72px;
 }
 
-
-
 .card:hover {
   transform: translateY(-6px);
 }
-
 
 .card h3 {
   font-size: 38px;
@@ -171,98 +143,53 @@ body {
   margin-bottom: 24px;
 }
 
-
 .card p {
   font-size: 20px;
   line-height: 1.9;
   color: #333;
 }
 
-
-
 .card-icons {
-
   display: flex;
-
   justify-content: center;
-
   align-items: center;
-
   margin-top: 35px;
 }
 
-
-
-
 .card-icons i {
-
   width: 70px;
-
   height: 70px;
-
   border-radius: 50%;
-
   background-color: var(--lime);
-
   color: var(--teal);
-
   font-size: 28px;
-
   display: flex;
-
   align-items: center;
-
   justify-content: center;
-
   transition: 0.3s ease;
 }
 
-
-
-
 .card-icons i:hover {
-
   transform: translateY(-4px);
-
   background-color: var(--soft-yellow);
 }
 
-
+/* Tablet responsive layout */
 @media (max-width: 1100px) {
-
   .cards {
     grid-template-columns: repeat(2, 1fr);
   }
-
   .section-title {
     font-size: 42px;
   }
 }
-
-
 @media (max-width: 700px) {
-
-  .cards {
-    grid-template-columns: 1fr;
-  }
-
-  .section-title {
-    font-size: 34px;
-  }
-
-  .card {
-    min-height: auto;
-  }
-
-  .card h3 {
-    font-size: 30px;
-  }
-
-  .card p {
-    font-size: 18px;
-  }
+  .cards {grid-template-columns: 1fr;}
+  .section-title {font-size: 34px;}
+  .card {min-height: auto;}
+  .card h3 {font-size: 30px;}
+  .card p {font-size: 18px;}
 }
-
 
 .contact-section {
   background-color: var(--cream);
@@ -277,7 +204,6 @@ body {
   padding: 50px;
 }
 
-
 .contact-container h2 {
   font-family: var(--font-display);
   font-size: 56px;
@@ -286,8 +212,6 @@ body {
   color: var(--teal);
 }
 
-
-
 .contact-container form {
   display: flex;
   flex-direction: column;
@@ -295,82 +219,47 @@ body {
   margin-top: 20px;
 }
 
-
 .contact-container label {
-
   font-size: 18px;
-
   font-weight: 500;
-
   margin-bottom: 10px;
-
   color: var(--text-dark);
 }
 
-
-
 .contact-container input,
 .contact-container textarea {
-
   width: 100%;
-
   padding: 18px;
-
   border: none;
-
   border-radius: 14px;
-
   font-size: 16px;
-
   background-color: white;
-
   margin-bottom: 24px;
-
   outline: none;
-  
   text-align:left;
-  
   width: 100%;
 }
 
-
 .contact-container textarea {
-
   min-height: 180px;
-
   resize: vertical;
 }
 
-
-
 .contact-container input[type="submit"] {
-
   background-color: #cddc39;
-
   color: var(--teal);
-
   font-size: 18px;
-
   font-weight: 600;
-
   border: none;
-
   border-radius: 14px;
-
   cursor: pointer;
-
   transition: 0.3s ease;
 }
 
-
-
 .contact-container input[type="submit"]:hover {
-
   opacity: 0.85;
-
   transform: translateY(-2px);
 }
-
 
 .partners-section {
   background-color: var(--cream);
@@ -379,7 +268,6 @@ body {
   border-radius: 0;
   text-align: center;
 }
-
 
 .section-heading {
   font-family: var(--font-display);
@@ -390,7 +278,6 @@ body {
   margin: 0 auto 8px;
   text-align: center;
 }
-
 
 .partners-section h2 {
   font-family: var(--font-display);
@@ -403,21 +290,13 @@ body {
   font-weight: 400;
 }
 
-
-
 .partners-section h2 {
-
   font-family: var(--font-display);
-
   font-size: 56px;
-
   font-weight: 700;
-
   color: var(--teal);
-
   margin-bottom: 50px;
 }
-
 
 .splide__slide {
   height: 140px;
@@ -430,7 +309,6 @@ body {
   padding: 20px;
 }
 
-
 .splide__slide img {
   max-width: 78%;
   max-height: 88px;
@@ -438,15 +316,10 @@ body {
   display: block;
 }
 
-
-
 .splide__slide:hover {
-
   transform: translateY(-4px);
-
   transition: 0.3s ease;
 }
-
 
 @media (max-width: 900px) {
   .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
@@ -466,25 +339,17 @@ body {
 
 h1 {
   font-family: var(--font-body);
-
   font-size: 56px;
-
   font-weight: 700;
-
   color: #111;
-
   margin-bottom: 50px;
 }
 
 h2 {
  font-family: var(--font-body);
-
   font-size: 56px;
-
   font-weight: 700;
-
   color: #111;
-
   margin-bottom: 50px;
 }
 
@@ -593,9 +458,6 @@ form input[type="submit"]:hover {
   }
 }
 
-
-
-
 .points-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -605,6 +467,7 @@ form input[type="submit"]:hover {
   padding: 0 24px;
 
 }
+
 .point-card {
   background: var(--cream);
   border-radius: 14px;
@@ -613,6 +476,7 @@ form input[type="submit"]:hover {
   display: flex;
   flex-direction: column;
 }
+
 .point-token {
   width: 74px;
   height: 74px;
@@ -642,7 +506,6 @@ form input[type="submit"]:hover {
   line-height: 1.65;
   color: var(--text-mid);
 }
-
 
 @media (max-width: 1000px) {
   .points-grid {
