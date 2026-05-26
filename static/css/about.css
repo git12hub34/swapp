@@ -181,7 +181,7 @@ p {
 
   line-height: 1.7;
 
-  color: rgba(232,232,200,0.85);
+  color: var(--text-dark);
 
   max-width: 700px;
 
