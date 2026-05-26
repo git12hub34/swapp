@@ -269,13 +269,17 @@
 </div>
 
 <!-- ───────── SPLIDE JS ───────── -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
 <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-auto-scroll@0.5.3/dist/js/splide-extension-auto-scroll.min.js"></script>
 <script>
   document.addEventListener('DOMContentLoaded', function () {
     new Splide('#image-slider', {
       type: 'loop',
-      perPage: 3,
+      pauseOnHover: false
+      pauseOnFocus: false
+      perPage: 5,
+      drag: false
       gap: '10px',
       arrows: false,
       pagination: false,
