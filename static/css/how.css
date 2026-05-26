@@ -1,16 +1,11 @@
 
-/* =========================================================
-   1. PAGE BASE
-   ========================================================= */
 
 .how-page {
   background: var(--warm-white);
   color: var(--text-dark);
 }
 
-/* =========================================================
-   HERO SECTION
-   ========================================================= */
+
 
 .events-hero {
   width: 100%;
@@ -183,9 +178,7 @@
 }
 
 
-/* =========================================================
-   3. HOW IT WORKS — SCROLL SNAP STEPS
-   ========================================================= */
+
 
 .steps-outer {
   display: grid;
@@ -412,10 +405,6 @@
 }
 
 
-/* =========================================================
-   5. POINT SYSTEM
-   NOTE: .points-section is also used by the Examples section.
-   ========================================================= */
 
 .points-section {
   background: var(--cream);
@@ -428,7 +417,6 @@
 }
 
 
-/* Section headings */
 
 .points-heading,
 .bonus-heading {
@@ -469,7 +457,7 @@
 }
 
 
-/* Base point cards */
+
 
 .points-grid {
   display: grid;
@@ -555,7 +543,7 @@
 }
 
 
-/* Bonus point cards */
+
 
 .bonus-wrap {
   margin-top: 72px;
@@ -633,7 +621,7 @@
 }
 
 
-/* Extra points and not accepted */
+
 
 .extra-points-card {
   background: var(--lime);
@@ -681,9 +669,6 @@
 }
 
 
-/* =========================================================
-   6. EXAMPLES MARQUEE
-   ========================================================= */
 
 
 .examples-section {
@@ -773,7 +758,6 @@
 
 
 
-/* Example cards */
 
 
 .example-card {
@@ -793,7 +777,6 @@
   justify-content: space-between;
 }
 
-/* Top: point token + title */
 
 .example-top {
   display: grid;
@@ -886,7 +869,7 @@
   margin: 7px 0;
 }
 
-/* ─────────FAQS ───────── */
+
 
 .faq-section {
   background: var(--warm-white);
@@ -975,146 +958,4 @@
 
 .faq-item.open .faq-icon {
   transform: rotate(0deg);
-}
-
-
-/* =========================================================
-   8. RESPONSIVE
-   ========================================================= */
-
-/*
-@media (max-width: 900px) {
-  .points-grid,
-  .bonus-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .point-card {
-    min-height: auto;
-  }
-
-  .not-accepted-card ul {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 700px) {
-  .examples-marquee {
-    --card-width: 260px;
-    --card-gap: 16px;
-    --marquee-speed: 24s;
-  }
-
-  .example-card {
-    min-height: 410px;
-    padding: 22px;
-  }
-
-  .example-top {
-    grid-template-columns: 82px 1fr;
-    gap: 14px;
-  }
-
-  .example-number {
-    width: 64px;
-    height: 64px;
-    font-size: 2rem;
-  }
-
-  .example-label {
-    font-size: 1rem;
-    margin-top: 12px;
-  }
-
-  .example-card h3 {
-    margin-top: 20px;
-    font-size: 1.15rem;
-  }
-
-  .example-image-wrap {
-    height: 150px;
-  }
-
-  .example-breakdown {
-    font-size: 0.85rem;
-  }
-}
-
-@media (max-width: 600px) {
-  .events-hero {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 40px;
-
-    padding: 90px 6%;
-  }
-
-  .events-hero-text h1 {
-    font-size: 3.5rem;
-  }
-
-  .steps-outer {
-    grid-template-columns: 1fr;
-    height: auto;
-  }
-
-  .steps-sidebar {
-    display: none;
-  }
-
-  .steps-scroll {
-    height: auto;
-    overflow: visible;
-    scroll-snap-type: none;
-  }
-
-  .step-slide {
-    height: auto;
-    scroll-snap-align: none;
-    padding: 60px 6%;
-  }
-
-  .step-content {
-    grid-template-columns: 1fr;
-    gap: 32px;
-  }
-
-  .step-image-wrap {
-    aspect-ratio: 4 / 3;
-  }
-
-  .step-number {
-    font-size: 5rem;
-  }
-
-  .points-section {
-    padding: 72px 6%;
-  }
-
-  .extra-points-card {
-    align-items: flex-start;
-    flex-direction: column;
-  }
-
-  .point-card,
-  .bonus-card,
-  .extra-points-card,
-  .not-accepted-card {
-    border-radius: 12px;
-  }
-
-  .faq-section {
-    padding: 72px 6%;
-  }
-}
-*/
-
-
-@media (max-width: 600px) {
-  .hero-inner { padding: 60px 6% 140px; }
-  .hero-headline { font-size: 2.6rem; }
-  .stats-bar { grid-template-columns: 1fr 1fr; }
-  .about-section, .join-section, .community-section, .faq-section { padding: 72px 6%; }
-  .community-grid { grid-template-columns: 1fr; }
-  .community-img-large { grid-column: auto; }
 }
